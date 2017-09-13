@@ -33,4 +33,4 @@ It can answer Critical questions like -
 
 
 ### License
->This project is licensed under  [**_GNU General Public License v3.0_**]()
+>This project is licensed under  [**_GNU General Public License v3.0_**](https://github.com/vrahangdale/Team-7/blob/master/LICENSE)
