@@ -30,3 +30,7 @@ It can answer Critical questions like -
  * Trend of Smoking status in participating state
  * Population active in smoking according to gender, race, age, education, area.
  * Data might give us answer on which population, gender and age decision maker can foccus on to make policies and health campaigns in particular area.
+
+
+### License
+>This project is licensed under  [**_GNU Public License_**]()
