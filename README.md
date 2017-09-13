@@ -25,7 +25,7 @@ Team Repository for Group Project
   * What is the average personal meeting hours for successful projects?
   * In which semester was the success rate more
 
-4. Tobacco Use
+4. Tobacco Use-
 It can answer Critical questions like -
  * Trend of Smoking status in participating state
  * Population active in smoking according to gender, race, age, education, area.
