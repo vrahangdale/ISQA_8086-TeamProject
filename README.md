@@ -20,13 +20,12 @@ Team Repository for Group Project
 * It is a partial record of other significant meteorological events, such as record maximum or minimum temperatures or precipitation that occurs in connection with another event.
 
 3. Software Engineering Team-
- 
-It can answer Critical questions like -
+  It can answer Critical questions like -
   * How many project teams were successful and how many are failed?
   * What is the average personal meeting hours for successful projects?
   * In which semester was the success rate more
 
-4. Tobacco Use 
+4. Tobacco Use
 It can answer Critical questions like -
  * Trend of Smoking status in participating state
  * Population active in smoking according to gender, race, age, education, area.
