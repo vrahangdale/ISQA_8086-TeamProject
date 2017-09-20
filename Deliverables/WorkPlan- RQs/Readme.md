@@ -22,7 +22,7 @@ An Episode is an entire storm system and can contain many different types of eve
 An Event is an individual type of storm event. (Thunderstorm Wind, Hail, Tornado and Flood are events)
 WFO is Weather Forecast Offices
 
-The Rawdataset can be found [here]()    
+The Rawdataset can be found [here](https://github.com/vrahangdale/ISQA_8086-TeamProject/tree/master/RawDataset)    
 ## 2. Draft Research Question
 
 ## 3. Project Timeline
