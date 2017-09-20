@@ -26,6 +26,13 @@ The Rawdataset can be found [here](https://github.com/vrahangdale/ISQA_8086-Team
 
 ## 2. Draft Research Question
 
+1. What is the average duration of each event such as hail, tornado, etc. for each month?
+2. Which state is having maximum injuries/deaths with each event?
+3. What is the average distance covered and area affected by each type of event?
+4. Which event is more likely to occur on the basis of month (monthwise occurrence)?
+5. What is estimated amount of damage (damage property & damage crops) caused by each event? which event is most likely to cause maximum damage?
+6. Which event is the most severe taking into consideration both fatalities and damage?
+
 ## 3. Project Timeline
 
 * The Project Timeline is used for estimation of time and effort required to complete the required deliverables described in project guidelines and requirements of this project.
