@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 ## This markdown document explains the dataset analysis - Storm Event data  with respect to research questions, planned timeline for completing the project, projected effort allocation (who will do which tasks), and target audience for the analysis._
 
+=======
+## This markdown document explains the dataset analysis - Storm Event data  with respect to research questions, planned timeline for completing the project, projected effort allocation (who will do which tasks), and target audience for the analysis.
+>>>>>>> d2fe40f4b7140e647a1dabd597495bb989886390
 
 ### This document includes:-
      1. Introduction of Strom Event Data Set
@@ -23,12 +27,23 @@ An Episode is an entire storm system and can contain many different types of eve
 An Event is an individual type of storm event. (Thunderstorm Wind, Hail, Tornado and Flood are events)
 WFO is Weather Forecast Offices
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> d2fe40f4b7140e647a1dabd597495bb989886390
 The Rawdataset can be found [here](https://github.com/vrahangdale/ISQA_8086-TeamProject/tree/master/RawDataset)    
 
 ## 2. Draft Research Question
 
 ## 3. Project Timeline
+
+* The Project Timeline is used for estimation of time and effort required to complete the required deliverables described in project guidelines and requirements of this project.
+* Total estimated time to complete this project with all deliverables is 51.4 = 52 days.
+* The project timeline includes the tasks identification, the time and effort required for completion and the duration of the entire project. Projectlibre software was used for making the Gantt chart. Gantt Chart of this project can be found [here](https://github.com/vrahangdale/ISQA_8086-TeamProject/blob/master/Deliverables/WorkPlan-%20RQs/GanttChart.pdf)
+
+
+## 4. Project Effort Allocation
+
 
 | Task                                      | Description                                                                                                                                                                       | Chandra | Shravya | Vaibhav | Pradeep | Task Week Number |
 |-------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------|---------|---------|---------|------------------|
@@ -42,15 +57,19 @@ The Rawdataset can be found [here](https://github.com/vrahangdale/ISQA_8086-Team
 | Presentation                              | Deliver the final data analysis to the stakeholders and target audience with project standards                                                                                    | X       | X       | X       | X       | Week 15          |
 | Github Package                            | All the analysis and interpretations will be available in git hub with usage policy.                                                                                              | X       | X       | X       | X       | Week 15          |
 
-## 4. Project Effort Allocation
 
-      Research Question-Chandra and Vaibhav
-      Project Timeline- Vaibhav
-      Target Audience- Shravya
-      Ghantt Chart- Pradeep
+
 
 ## 5. Target Audience
   * Climate data is used by scientists in their research and analysis of past, current, and future climate change. But today, the information is also  commonly used by the policy makers to make informed strategies to prevent and adapt to climate change, and the scientists also recommend the increased availablity of data to public to reduce their vulnerability to climatic changes.
 
 ## Reference
     National Centers for Environmental Information.(2017) Strom Event database 2017, from https://www.ncdc.noaa.gov/stormevents/
+    
+##### Workplan & RQ's Resposibilty Matrix-
+* Introduction of Strom Event Data Set - Pradeep
+* Draft Research Questions- Chandra and Vaibhav
+* Project Timeline - Pradeep and Vaibhav
+* Projected Effort Allocation- Vaibhav
+* Target Audience- Shravya
+* Gantt Chart - Pradeep
