@@ -10,7 +10,6 @@ _This markdown document explains the dataset analysis - Storm Event data  with r
 
 ## 1. Introduction of StromEvent Data set
 
-<<<<<<< HEAD
 The NCEI Storm Events Database contains various types of storm reports searchable by state, county, date, and event type from 1950 to the present. Data are also available in comma-separated value (CSV) files, as entered by NOAA's National Weather Service (NWS). 
 > EVENT_ID	STATE	STATE_FIPS	YEAR	MONTH_NAME	EVENT_TYPE	CZ_TYPE	CZ_FIPS	CZ_NAME	WFO	BEGIN_DATE_TIME	CZ_TIMEZONE	END_DATE_TIME	INJURIES_DIRECT  	INJURIES_INDIRECT	DEATHS_DIRECT	DEATHS_INDIRECT	DAMAGE_PROPERTY	DAMAGE_CROPS	SOURCE	          MAGNITUDE
 
@@ -23,8 +22,6 @@ An Episode is an entire storm system and can contain many different types of eve
 An Event is an individual type of storm event. (Thunderstorm Wind, Hail, Tornado and Flood are events)
 WFO is Weather Forecast Offices
    
-=======
->>>>>>> cae4647d43f83feca70e7738cfeeefc8a868ec86
 ## 2. Draft Research Question
 
 ## 3. Project Timeline
@@ -41,8 +38,7 @@ WFO is Weather Forecast Offices
 ## 4. Project Effort Allocation
 
       Research Question- 
-      Project Timeline-
-<<<<<<< HEAD
+      Project Timeline
       Target Audience- Shravya Shruthi Pathala
       Ghantt Chart- Pradeep Pal
 
@@ -51,10 +47,3 @@ WFO is Weather Forecast Offices
 
 ## Reference
     National Centers for Environmental Information.(2017) Strom Event database 2017, from https://www.ncdc.noaa.gov/stormevents/
-=======
-      Target Audience-
-      Ghantt Chart- Pradeep Pal
-
-## 5. Target Audience 
-
->>>>>>> cae4647d43f83feca70e7738cfeeefc8a868ec86
