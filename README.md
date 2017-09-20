@@ -8,14 +8,14 @@ Team Repository for Group Project
 
 ### This project includes:
 
-1. [Work plan & draft research questions:  Week 6](https://github.com/vrahangdale/ISQA_8086-TeamProject/tree/master/WorkPlan-%20RQs)
-2.  Data cleaning documentation draft:  Week 9
-3.  Team progress meeting:  Week 9
-4.  R script draft:  Week 11
-5.  R plot draft:  Week 12
-6.  Audience persona:  Week 14
-7.  Presentation:  Week 15
-8.  Git package:  Week 15
+1. [Work plan & draft research questions](https://github.com/vrahangdale/ISQA_8086-TeamProject/tree/master/Deliverables/WorkPlan-%20RQs)
+2.  Data cleaning documentation draft
+3.  Team progress meeting
+4.  R script draft
+5.  R plot draft
+6.  Audience persona
+7.  Presentation
+8.  Git package
 
 
 
