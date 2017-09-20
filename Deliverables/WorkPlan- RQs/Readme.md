@@ -49,13 +49,18 @@ The Rawdataset can be found [here](https://github.com/vrahangdale/ISQA_8086-Team
 | Github Package                            | All the analysis and interpretations will be available in git hub with usage policy.                                                                                              | X       | X       | X       | X       | Week 15          |
 
 
-      Research Question-Chandra and Vaibhav
-      Project Timeline- Vaibhav
-      Target Audience- Shravya
-      Gantt Chart- Pradeep
+
 
 ## 5. Target Audience
   * Climate data is used by scientists in their research and analysis of past, current, and future climate change. But today, the information is also  commonly used by the policy makers to make informed strategies to prevent and adapt to climate change, and the scientists also recommend the increased availablity of data to public to reduce their vulnerability to climatic changes.
 
 ## Reference
     National Centers for Environmental Information.(2017) Strom Event database 2017, from https://www.ncdc.noaa.gov/stormevents/
+    
+##### Workplan & RQ's Resposibilty Matrix-
+Introduction of Strom Event Data Set - Pradeep
+Draft Research Questions- Chandra and Vaibhav
+Project Timeline - Pradeep and Vaibhav
+Projected Effort Allocation- Vaibhav
+Target Audience- Shravya
+Gantt Chart - Pradeep
