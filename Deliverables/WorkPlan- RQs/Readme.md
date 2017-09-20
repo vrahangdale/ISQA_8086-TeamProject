@@ -28,6 +28,12 @@ The Rawdataset can be found [here](https://github.com/vrahangdale/ISQA_8086-Team
 
 ## 3. Project Timeline
 
+
+
+
+## 4. Project Effort Allocation
+
+
 | Task                                      | Description                                                                                                                                                                       | Chandra | Shravya | Vaibhav | Pradeep | Task Week Number |
 |-------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------|---------|---------|---------|------------------|
 | Work plan & RQ's                          | Planning the projects duration and task allocated to each member                                                                                                                  | X       | X       | X       | X       | Week 5           |
@@ -40,7 +46,6 @@ The Rawdataset can be found [here](https://github.com/vrahangdale/ISQA_8086-Team
 | Presentation                              | Deliver the final data analysis to the stakeholders and target audience with project standards                                                                                    | X       | X       | X       | X       | Week 15          |
 | Github Package                            | All the analysis and interpretations will be available in git hub with usage policy.                                                                                              | X       | X       | X       | X       | Week 15          |
 
-## 4. Project Effort Allocation
 
       Research Question-Chandra and Vaibhav
       Project Timeline- Vaibhav
