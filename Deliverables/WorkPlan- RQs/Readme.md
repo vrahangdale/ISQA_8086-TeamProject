@@ -29,8 +29,8 @@ The Rawdataset can be found [here](https://github.com/vrahangdale/ISQA_8086-Team
 ## 3. Project Timeline
 
 * The Project Timeline is used for estimation of time and effort required to complete the required deliverables described in project guidelines and requirements of this project.
-* Total estimated time to complete this project with all deliverables is .
-* The project timeline includes the tasks identification, the time and effort required for completion and the duration of the entire project. Projectlibre software was used for making the Gantt chart. Gantt Chart of this project can be found [here]()
+* Total estimated time to complete this project with all deliverables is 51.4 = 52 days.
+* The project timeline includes the tasks identification, the time and effort required for completion and the duration of the entire project. Projectlibre software was used for making the Gantt chart. Gantt Chart of this project can be found [here](https://github.com/vrahangdale/ISQA_8086-TeamProject/blob/master/Deliverables/WorkPlan-%20RQs/GanttChart.pdf)
 
 
 ## 4. Project Effort Allocation
