@@ -1,4 +1,4 @@
-_This markdown document explains the dataset analysis - Storm Event data  with respect to research questions, planned timeline for completing the project, projected effort allocation (who will do which tasks), and target audience for the analysis._
+_This markdown document explains the dataset analysis - ** Storm Event data**  with respect to research questions, planned timeline for completing the project, projected effort allocation (who will do which tasks), and target audience for the analysis._
  
 ### This document includes:-
      1. Introduction of Strom Event Data Set
@@ -21,7 +21,8 @@ LAT/LON - Lattitude/Longitude
 An Episode is an entire storm system and can contain many different types of events.
 An Event is an individual type of storm event. (Thunderstorm Wind, Hail, Tornado and Flood are events)
 WFO is Weather Forecast Offices
-   
+
+The Rawdataset can be found [here]()    
 ## 2. Draft Research Question
 
 ## 3. Project Timeline
