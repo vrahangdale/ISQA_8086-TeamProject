@@ -50,7 +50,7 @@ The Rawdataset can be found [here](https://github.com/vrahangdale/ISQA_8086-Team
       Research Question-Chandra and Vaibhav
       Project Timeline- Vaibhav
       Target Audience- Shravya
-      Ghantt Chart- Pradeep
+      Gantt Chart- Pradeep
 
 ## 5. Target Audience
   * Climate data is used by scientists in their research and analysis of past, current, and future climate change. But today, the information is also  commonly used by the policy makers to make informed strategies to prevent and adapt to climate change, and the scientists also recommend the increased availablity of data to public to reduce their vulnerability to climatic changes.
