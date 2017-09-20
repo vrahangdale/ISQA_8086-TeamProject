@@ -1,4 +1,4 @@
-## This markdown document explains the dataset analysis - Storm Event data  with respect to research questions, planned timeline for completing the project, projected effort allocation (who will do which tasks), and target audience for the analysis._
+## This markdown document explains the dataset analysis - Storm Event data  with respect to research questions, planned timeline for completing the project, projected effort allocation (who will do which tasks), and target audience for the analysis.
 
 ### This document includes:-
      1. Introduction of Strom Event Data Set
