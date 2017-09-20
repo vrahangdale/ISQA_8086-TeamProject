@@ -58,9 +58,9 @@ The Rawdataset can be found [here](https://github.com/vrahangdale/ISQA_8086-Team
     National Centers for Environmental Information.(2017) Strom Event database 2017, from https://www.ncdc.noaa.gov/stormevents/
     
 ##### Workplan & RQ's Resposibilty Matrix-
-Introduction of Strom Event Data Set - Pradeep
-Draft Research Questions- Chandra and Vaibhav
-Project Timeline - Pradeep and Vaibhav
-Projected Effort Allocation- Vaibhav
-Target Audience- Shravya
-Gantt Chart - Pradeep
+* Introduction of Strom Event Data Set - Pradeep
+* Draft Research Questions- Chandra and Vaibhav
+* Project Timeline - Pradeep and Vaibhav
+* Projected Effort Allocation- Vaibhav
+* Target Audience- Shravya
+* Gantt Chart - Pradeep
