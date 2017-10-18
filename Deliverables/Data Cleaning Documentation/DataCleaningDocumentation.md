@@ -63,11 +63,11 @@ National Centers for Environmental Information.(2017) Strom Event database 2017,
  ### 6. A script or step-by-step textual description (or a combination) that documents your data cleaning process with enough detail for replication.
  * Scripts-
  ### Over the year, frequency of occurrence of event type on the basis of location
-Reading the file from raw dataset and assigning it to a variable Dataset.  
-> Dataset=read.csv('StormEvents_details-ftp_v1.0_d2016_c20170918.csv')
-Reading the columns State, Year, Event Type, BEGIN_LAT, BEGIN_LON, END_LAT, END_LON and assigning it as 
+> Reading the file from raw dataset and assigning it to a variable Dataset.  
+Dataset=read.csv('StormEvents_details-ftp_v1.0_d2016_c20170918.csv')
+> Reading the columns State, Year, Event Type, BEGIN_LAT, BEGIN_LON, END_LAT, END_LON and assigning it as 
 Dataset1<-Dataset[,c(9,11,13,45,46,47,48)]
-Get a data frame that has only the cases with no missing values for any variable
+> Get a data frame that has only the cases with no missing values for any variable
 Dataset2<- na.omit(Dataset1)
 
 #### Contributors-
