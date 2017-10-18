@@ -1,5 +1,5 @@
 
-# **_Strom Event Dataset 2017_**
+# **_Strom Event Dataset _**
 
 ## About dataset
 
@@ -38,4 +38,9 @@ National Centers for Environmental Information.(2017) Strom Event database 2017,
  ### 4. Identify any issues you have encountered with the data: missing values, unstandardized content, entity matching, etc.
  ### 5. 1 paragraph description of your rationale for the steps you’re taking to remediate data. For example, if you need to fill in empty fields, specify what value you chose and why.
  ### 6. A script or step-by-step textual description (or a combination) that documents your data cleaning process with enough detail for replication.
- 
+
+#### Contributors-
+Chandra
+Shravya
+Pradeep
+Vaibhav
