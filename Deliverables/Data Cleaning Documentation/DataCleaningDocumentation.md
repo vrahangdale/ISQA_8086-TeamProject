@@ -1,3 +1,5 @@
+### 1.  1–2 paragraph text description of the data source/s (how much, where from, what it contains,etc.)  with a properly formatted citation for each data source.  This should include how manyrows & columns (&/or tables) and sample column headers.
+
 ### **Strom Event Dataset**
 #### About dataset
 
