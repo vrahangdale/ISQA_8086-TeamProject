@@ -61,6 +61,11 @@ National Centers for Environmental Information.(2017) Strom Event database 2017,
  ### 5. 1 paragraph description of your rationale for the steps you’re taking to remediate data. For example, if you need to fill in empty fields, specify what value you chose and why.
 * We are using different set of columns for each of the research question so that our analysis is oriented towards a particular audience and our result can be implemented easily . For our intitial analysis we are replacing 'none' value with 'na' because R automatically excludes all cases in which any of the inputs are missing; this can limit the amount of information available in the analysis. We are dropping the columns which have redundant data such as 'BEGIN_YEARMONTH', 'BEGIN_YEARMONTH', 'BEGIN_DATE_TIME', 'END_DATE_TIME', 'state_fips' as these values are combination of columns present in the data set and for the analysis we can keep the data granular so that we can represent the result in more granular way. We are also removing the columns 'EPISODE_NARRATIVE', 'event_narrative' and 'DATA_SOURCE' as these are nominal data and it will hard to analyize them in R, but we will be using them seperately as remarks. 
  ### 6. A script or step-by-step textual description (or a combination) that documents your data cleaning process with enough detail for replication.
+ ## Over the year, frequency of occurrence of event type on the basis of location
+ 
+Dataset=read.csv('StormEvents_details-ftp_v1.0_d2016_c20170918.csv',header = TRUE,na.strings = c("",NULL,'NA'))
+Dataset1<-Dataset[,c(9,11,13,45,46,47,48)]
+Dataset2<- na.omit(Dataset1)
 
 #### Contributors-
 * Chandra
