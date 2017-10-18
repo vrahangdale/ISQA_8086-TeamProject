@@ -39,7 +39,7 @@ National Centers for Environmental Information.(2017) Strom Event database 2017,
  ### 6. A script or step-by-step textual description (or a combination) that documents your data cleaning process with enough detail for replication.
 
 #### Contributors-
-   Chandra
-   Shravya
-   Pradeep
-   Vaibhav
+* Chandra
+* Shravya
+* Pradeep
+* Vaibhav
