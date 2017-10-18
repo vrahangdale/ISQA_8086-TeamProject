@@ -65,18 +65,53 @@ National Centers for Environmental Information.(2017) Strom Event database 2017,
  ### 1. Over the year, frequency of occurrence of event type on the basis of location
 ##### Reading the file from raw dataset and assigning it to a variable Dataset.  
 > Dataset=read.csv('StormEvents_details-ftp_v1.0_d2016_c20170918.csv')
-##### Reading the columns State, Year, Event Type, BEGIN_LAT, BEGIN_LON, END_LAT, END_LON and assigning it as Dataset1
-> Dataset1<-Dataset[,c(9,11,13,45,46,47,48)]
+##### Reading the columns State, Year, Event Id,Event Type, BEGIN_LAT, BEGIN_LON, END_LAT, END_LON and assigning it as Dataset1
+> Dataset1<-Dataset[,c(8,9,11,13,45,46,47,48)]
 ##### Get a data frame that has only the cases with no missing values for any variable and assigning it to Dataset2
 > Dataset2<- na.omit(Dataset1)
 
+#####  Checking duplicates 
+nrow(Dataset2)  --36422
+dup2<-unique(Dataset2)
+nrow(dup2) --36422
 ### 2. Over the five years specific event type occurrence, let say- Thunderstorm.
 
 ### 3. Which event is more likely to occur on the basis of month (monthwise occurrence)?
 
+##### Reading the  Event Id,Event Type, Month and assigning it as Dataset3_month
+Dataset3_month <- Dataset[,c(8,12,13)]
+
+#####  Checking duplicates 
+nrow(Dataset3_month) --55959
+dup3<- unique(Dataset3_month)
+nrow(dup3)  --55959
+
 ### 4. What is estimated amount of damage (damage property & damage crops) caused by each event? which event is most likely to cause maximum damage?
 
+##### Reading the  Event Id,Event Type, Month, damage property, damage crops and assigning it as Dataset4_damage
+Dataset4_damage <- Dataset[,c(8,12,13,25,26)]
+
+##### Replacing null with 0.00K
+Dataset4_damage[is.na(Dataset4_damage)] <- "0.00K"
+
+#####  Checking duplicates 
+nrow(Dataset4_damage) --55959
+dup4<- unique(Dataset4_damage)
+nrow(dup4)  --55959
+
 ### 5. Which event is the most severe taking into consideration both fatalities and damage?
+
+
+##### Reading the  Event Id,Event Type, Month, damage property, injuries direct,injuries indirect, deaths indirect, deaths direct and assigning it as Dataset4_damage
+Dataset5_severity <- Dataset[,c(8,12,13,25,21,22,24,23)]
+
+##### Replacing null with 0.00K
+Dataset5_severity[is.na(Dataset5_severity)] <- "0.00K"
+
+#####  Checking duplicates 
+nrow(Dataset5_severity) --55959
+dup5<- unique(Dataset5_severity)
+nrow(dup5)  --55959
 
 #### Contributors-
 * Chandra
