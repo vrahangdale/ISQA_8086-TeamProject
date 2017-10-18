@@ -16,8 +16,8 @@ The Strom Event dataset is having 51 attributes overall, few of which are State_
 # CSV file info
 All the csv files have 51 columns (attributes)
 * StormEvents_details-ftp_v1.0_d2011_c20170519.csv file has 79092 rows
-*  StormEvents_details-ftp_v1.0_d2012_c20170519.csv file has 64504 rows
-*  StormEvents_details-ftp_v1.0_d2012_c20170519.csv file has 59986 rows
+* StormEvents_details-ftp_v1.0_d2012_c20170519.csv file has 64504 rows
+* StormEvents_details-ftp_v1.0_d2012_c20170519.csv file has 59986 rows
 * StormEvents_details-ftp_v1.0_d2012_c20170519.csv file has 11975977040 rows
 * StormEvents_details-ftp_v1.0_d2012_c20170519.csv file has 11644627304 rows
 * StormEvents_details-ftp_v1.0_d2012_c20170519.csv file has 11281684247 rows
