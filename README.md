@@ -9,7 +9,7 @@ Team Repository for Group Project
 ### This project includes:
 
 1. [Work plan & draft research questions](https://github.com/vrahangdale/ISQA_8086-TeamProject/tree/master/Deliverables/WorkPlan-%20RQs)
-2.  Data cleaning documentation draft
+2.  [Data cleaning documentation draft](https://github.com/vrahangdale/ISQA_8086-TeamProject/tree/master/Deliverables/Data%20Cleaning%20Documentation)
 3.  Team progress meeting
 4.  R script draft
 5.  R plot draft
