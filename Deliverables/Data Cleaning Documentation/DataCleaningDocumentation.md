@@ -2,12 +2,14 @@
 # **_Strom Event Dataset 2017_**
 
 ## About dataset
-	The National Centers for Environmental Information (NCEI) regularly receives Storm Data from the National Weather Service (NWS). This data set consists of state wise occurrence of Event type in USA like Tornado, Thunderstorm Wind and Hail, Marine strong wind, Flash flood, Heavy rain, Heavy snow, Funnel Cloud, Extensive Heat and also contains data regarding locations, fatalities, injuries, damage, narratives and any other event specific information which can be used for information and analysis by business sectors, insurance companies, hazard mitigation, policy makers etc. (NCDC, 2017)
+
+The National Centers for Environmental Information (NCEI) regularly receives Storm Data from the National Weather Service (NWS). This data set consists of state wise occurrence of Event type in USA like Tornado, Thunderstorm Wind and Hail, Marine strong wind, Flash flood, Heavy rain, Heavy snow, Funnel Cloud, Extensive Heat and also contains data regarding locations, fatalities, injuries, damage, narratives and any other event specific information which can be used for information and analysis by business sectors, insurance companies, hazard mitigation, policy makers etc. (NCDC, 2017)
 
 ## Data for our analysis
-	We are going to use the data collected over a period of 6 consecutive years i.e. from 2011-2016 and refine it through data cleaning using R for our analysis.
 
-   The Strom Event dataset is having 51 attributes overall, few of which are State_FIPS, Storm magnitude with storm events type in particular location, and this data can be used in personal, educational, and academic purposes.
+We are going to use the data collected over a period of 6 consecutive years i.e. from 2011-2016 and refine it through data cleaning using R for our analysis.
+
+The Strom Event dataset is having 51 attributes overall, few of which are State_FIPS, Storm magnitude with storm events type in particular location, and this data can be used in personal, educational, and academic purposes.
 
 # The file format is CSV (Comma-Separated Values) text files which represent a dump or export of the Storm Events Database
 
@@ -29,7 +31,7 @@ All the csv files have 51 columns (attributes)
 ##  For more information about attributes click [here](https://www.ncdc.noaa.gov/stormevents/ftp.jsp).
 
 ## Reference
-    National Centers for Environmental Information.(2017) Strom Event database 2017, from https://www.ncdc.noaa.gov/stormevents/
+National Centers for Environmental Information.(2017) Strom Event database 2017, from https://www.ncdc.noaa.gov/stormevents/
 
  ### 2. Specifically identify any intellectual policy constraints, or lack thereof (licensing).
  ### 3. 1 paragraph description of the metadata: what information is available to help you interpret and understand the data?
