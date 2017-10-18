@@ -10,9 +10,9 @@ We are going to use the data collected over a period of 6 consecutive years i.e.
 
 The Strom Event dataset is having 51 attributes overall, few of which are State_FIPS, Storm magnitude with storm events type in particular location, and this data can be used in personal, educational, and academic purposes.
 
-#### The file format is CSV (Comma-Separated Values) text files which represent a dump or export of the Storm Events Database
+## The file format is CSV (Comma-Separated Values) text files which represent a dump or export of the Storm Events Database
 
-#### CSV file info
+## CSV file info
 All the csv files have 51 columns (attributes)
 * StormEvents_details-ftp_v1.0_d2011_c20170519.csv file has 79092 rows
 * StormEvents_details-ftp_v1.0_d2012_c20170519.csv file has 64504 rows
@@ -21,7 +21,7 @@ All the csv files have 51 columns (attributes)
 * StormEvents_details-ftp_v1.0_d2012_c20170519.csv file has 11644627304 rows
 * StormEvents_details-ftp_v1.0_d2012_c20170519.csv file has 11281684247 rows
 
-#### Some of the sample headers.
+## Some of the sample headers.
 
    > EVENT_ID	STATE	STATE_FIPS	YEAR	MONTH_NAME	EVENT_TYPE	CZ_TYPE	CZ_FIPS	CZ_NAME	WFO	BEGIN_DATE_TIME	CZ_TIMEZONE	END_DATE_TIME	INJURIES_DIRECT  	INJURIES_INDIRECT	DEATHS_DIRECT	DEATHS_INDIRECT	DAMAGE_PROPERTY	DAMAGE_CROPS	SOURCE	          MAGNITUDE
 
