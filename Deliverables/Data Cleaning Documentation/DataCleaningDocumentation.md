@@ -65,28 +65,18 @@ National Centers for Environmental Information.(2017) Strom Event database 2017,
  ### 1. Over the year, frequency of occurrence of event type on the basis of location
 ##### Reading the file from raw dataset and assigning it to a variable Dataset.  
 > Dataset=read.csv('StormEvents_details-ftp_v1.0_d2016_c20170918.csv')
-##### Reading the columns State, Year, Event Type, BEGIN_LAT, BEGIN_LON, END_LAT, END_LON and assigning it as 
+##### Reading the columns State, Year, Event Type, BEGIN_LAT, BEGIN_LON, END_LAT, END_LON and assigning it as Dataset1
 > Dataset1<-Dataset[,c(9,11,13,45,46,47,48)]
-##### Get a data frame that has only the cases with no missing values for any variable
+##### Get a data frame that has only the cases with no missing values for any variable and assigning it to Dataset2
 > Dataset2<- na.omit(Dataset1)
 
 ### 2. Over the five years specific event type occurrence, let say- Thunderstorm.
 
-
 ### 3. Which event is more likely to occur on the basis of month (monthwise occurrence)?
-
-Dataset3_month <- Dataset[,c(8,12,13)]
 
 ### 4. What is estimated amount of damage (damage property & damage crops) caused by each event? which event is most likely to cause maximum damage?
 
-Dataset4_damage <- Dataset[,c(8,12,25,26)]
-Dataset4_damage[is.na(Dataset4_damage)] <- "0.00K"
-
 ### 5. Which event is the most severe taking into consideration both fatalities and damage?
-
-Dataset5_severity <- Dataset[,c(8,12,25,21,22,24,23)]
-Dataset5_severity[is.na(Dataset5_severity)] <- "0.00K"
-
 
 #### Contributors-
 * Chandra
