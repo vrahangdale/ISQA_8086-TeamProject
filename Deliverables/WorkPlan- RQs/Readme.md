@@ -1,9 +1,7 @@
-<<<<<<< HEAD
+
 ## This markdown document explains the dataset analysis - Storm Event data  with respect to research questions, planned timeline for completing the project, projected effort allocation (who will do which tasks), and target audience for the analysis._
 
-=======
-## This markdown document explains the dataset analysis - Storm Event data  with respect to research questions, planned timeline for completing the project, projected effort allocation (who will do which tasks), and target audience for the analysis.
->>>>>>> d2fe40f4b7140e647a1dabd597495bb989886390
+
 
 ### This document includes:-
      1. Introduction of Strom Event Data Set
@@ -23,10 +21,7 @@ These data documents the occurrence of storms and other weather phenomenon such 
 
 
 
-<<<<<<< HEAD
 
-=======
->>>>>>> d2fe40f4b7140e647a1dabd597495bb989886390
 The Rawdataset can be found [here](https://github.com/vrahangdale/ISQA_8086-TeamProject/tree/master/RawDataset)    
 
 ## 2. Draft Research Question
