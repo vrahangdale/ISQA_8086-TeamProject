@@ -72,11 +72,21 @@ National Centers for Environmental Information.(2017) Strom Event database 2017,
 
 ### 2. Over the five years specific event type occurrence, let say- Thunderstorm.
 
+
 ### 3. Which event is more likely to occur on the basis of month (monthwise occurrence)?
+
+Dataset3_month <- Dataset[,c(8,12,13)]
 
 ### 4. What is estimated amount of damage (damage property & damage crops) caused by each event? which event is most likely to cause maximum damage?
 
+Dataset4_damage <- Dataset[,c(8,12,25,26)]
+Dataset4_damage[is.na(Dataset4_damage)] <- "0.00K"
+
 ### 5. Which event is the most severe taking into consideration both fatalities and damage?
+
+Dataset5_severity <- Dataset[,c(8,12,25,21,22,24,23)]
+Dataset5_severity[is.na(Dataset5_severity)] <- "0.00K"
+
 
 #### Contributors-
 * Chandra
