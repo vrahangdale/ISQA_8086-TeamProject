@@ -76,6 +76,45 @@ dup2<-unique(Dataset2)
 nrow(dup2) --36422
 ### 2. Over the five years specific event type occurrence, let say- Thunderstorm.
 
+##### Read the data set from 2011 to 2015
+dataset2015 <- read.csv('StormEvents_details-ftp_v1.0_d2015_c20170918.csv',header = TRUE,na.strings = c("",NULL,'NA'))
+dataset2014 <- read.csv('StormEvents_details-ftp_v1.0_d2014_c20170718.csv',header = TRUE,na.strings = c("",NULL,'NA'))
+dataset2013 <- read.csv('StormEvents_details-ftp_v1.0_d2013_c20170519.csv',header = TRUE,na.strings = c("",NULL,'NA'))
+dataset2012 <- read.csv('StormEvents_details-ftp_v1.0_d2012_c20170519.csv',header = TRUE,na.strings = c("",NULL,'NA'))
+dataset2011 <- read.csv('StormEvents_details-ftp_v1.0_d2011_c20170519.csv',header = TRUE,na.strings = c("",NULL,'NA'))
+
+##### Reading columns Event_id, State,Year, Month name, Event type from datasets 2011 to 2016
+dataset2_thunder <- Dataset[,c(8,9,11,12,13)]
+dataset2015_thunder <- dataset2015[,c(8,9,11,12,13)]
+dataset2014_thunder <- dataset2014[,c(8,9,11,12,13)]
+dataset2013_thunder <- dataset2013[,c(8,9,11,12,13)]
+dataset2012_thunder <- dataset2012[,c(8,9,11,12,13)]
+dataset2011_thunder <- dataset2011[,c(8,9,11,12,13)]
+
+##### Extracting rows for Event type Thunderstorm Wind
+dataset2_thunder1 <- subset(dataset2_thunder,EVENT_TYPE=="Thunderstorm Wind")
+dataset2015_thunder1 <- subset(dataset2015_thunder,EVENT_TYPE=="Thunderstorm Wind")
+dataset2014_thunder1 <- subset(dataset2014_thunder,EVENT_TYPE=="Thunderstorm Wind")
+dataset2013_thunder1 <- subset(dataset2013_thunder,EVENT_TYPE=="Thunderstorm Wind")
+dataset2012_thunder1 <- subset(dataset2012_thunder,EVENT_TYPE=="Thunderstorm Wind")
+dataset2011_thunder1 <- subset(dataset2011_thunder,EVENT_TYPE=="Thunderstorm Wind")
+
+##### Combining all data from 2011 to 2016
+dataall_thunder <- rbind(dataset2_thunder1,dataset2015_thunder1,dataset2014_thunder1,dataset2013_thunder1,dataset2012_thunder1,dataset2011_thunder1)
+
+##### Counting rows
+nrow(dataset2_thunder1) --15657
+nrow(dataset2015_thunder1)  --14400
+nrow(dataset2014_thunder1)  --13830
+nrow(dataset2013_thunder1)  --14355
+nrow(dataset2012_thunder1)  --16235
+nrow(dataset2011_thunder1)  --21282
+nrow(dataall_thunder) --95759
+
+##### checking and removing duplicates if any
+datauniquall_thunder <-unique(dataall_thunder)
+nrow(datauniquall_thunder) --95759
+
 ### 3. Which event is more likely to occur on the basis of month (monthwise occurrence)?
 
 ##### Reading the  Event Id,Event Type, Month and assigning it as Dataset3_month
