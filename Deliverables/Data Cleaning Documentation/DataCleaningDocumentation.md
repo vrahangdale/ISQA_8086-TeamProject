@@ -84,12 +84,12 @@ dataset2012 <- read.csv('StormEvents_details-ftp_v1.0_d2012_c20170519.csv',heade
 dataset2011 <- read.csv('StormEvents_details-ftp_v1.0_d2011_c20170519.csv',header = TRUE,na.strings = c("",NULL,'NA'))
 
 ##### Reading columns Event_id, State,Year, Month name, Event type from datasets 2011 to 2016
-dataset2_thunder <- Dataset[,c(8,9,11,12,13)]
-dataset2015_thunder <- dataset2015[,c(8,9,11,12,13)]
-dataset2014_thunder <- dataset2014[,c(8,9,11,12,13)]
-dataset2013_thunder <- dataset2013[,c(8,9,11,12,13)]
-dataset2012_thunder <- dataset2012[,c(8,9,11,12,13)]
-dataset2011_thunder <- dataset2011[,c(8,9,11,12,13)]
+ dataset2_thunder <- Dataset[,c(8,9,11,12,13)]
+ dataset2015_thunder <- dataset2015[,c(8,9,11,12,13)]
+ dataset2014_thunder <- dataset2014[,c(8,9,11,12,13)]
+ dataset2013_thunder <- dataset2013[,c(8,9,11,12,13)]
+ dataset2012_thunder <- dataset2012[,c(8,9,11,12,13)]
+ dataset2011_thunder <- dataset2011[,c(8,9,11,12,13)]
 
 ##### Extracting rows for Event type Thunderstorm Wind
 dataset2_thunder1 <- subset(dataset2_thunder,EVENT_TYPE=="Thunderstorm Wind")
