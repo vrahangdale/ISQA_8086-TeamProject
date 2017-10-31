@@ -1,6 +1,6 @@
 ### 1.  1–2 paragraph text description of the data source/s (how much, where from, what it contains,etc.)  with a properly formatted citation for each data source.  This should include how manyrows & columns (&/or tables) and sample column headers.
 
-### **Strom Event Dataset**
+### **Storm Event Dataset**
 #### About dataset
 
 The National Centers for Environmental Information (NCEI) regularly receives Storm Data from the National Weather Service (NWS). This data set consists of state wise occurrence of Event type in USA like Tornado, Thunderstorm Wind and Hail, Marine strong wind, Flash flood, Heavy rain, Heavy snow, Funnel Cloud, Extensive Heat and also contains data regarding locations, fatalities, injuries, damage, narratives and any other event specific information which can be used for information and analysis by business sectors, insurance companies, hazard mitigation, policy makers etc. (NCDC, 2017)
