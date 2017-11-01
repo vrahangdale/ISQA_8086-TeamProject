@@ -8,8 +8,6 @@ Dataset4_damage <- Dataset1[,c(8,12,13,25,26)]
 Dataset4_damage[is.na(Dataset4_damage)] <- "0.00K"
 
 
-ptn= '*.M^'
-
 subset(Dataset4_damage,grepl("M",'DAMAGe_PROPERTY'))
 
 sqldf(c("UPDATE Dataset4_damage 
