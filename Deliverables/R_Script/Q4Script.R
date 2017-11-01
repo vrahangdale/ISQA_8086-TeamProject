@@ -1,3 +1,5 @@
+Q4. What is estimated amount of damage (damage property & damage crops) caused by each event? which event is most likely to cause maximum damage?
+
 Dataset1=read.csv('StormEvents_details-ftp_v1.0_d2016_c20170918.csv')
 rm(Dataset4_damage)
 
