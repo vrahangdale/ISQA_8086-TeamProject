@@ -8,16 +8,6 @@ Dataset4_damage <- Dataset1[,c(8,12,13,25,26)]
 Dataset4_damage[is.na(Dataset4_damage)] <- "0.00K"
 
 
-subset(Dataset4_damage,grepl("M",'DAMAGe_PROPERTY'))
-
-sqldf(c("UPDATE Dataset4_damage 
-SET  DAMAGE_PROPERTY=SUBSTR (DAMAGE_PROPERTY,1,length(DAMAGE_PROPERTY)-1)* 1000 
-      WHERE DAMAGE_PROPERTY LIKE '%M'"))
-
-sqldf("SELECT  DAMAGE_PROPERTY,
-SUBSTR (DAMAGE_PROPERTY,1,length(DAMAGE_PROPERTY)-1)* 1000 FROM Dataset4_damage
-      WHERE DAMAGE_PROPERTY LIKE '%M'")
-
 sql1 <- "UPDATE Dataset4_damage 
 SET  DAMAGE_PROPERTY=SUBSTR (DAMAGE_PROPERTY,1,length(DAMAGE_PROPERTY)-1)* 1000,
       DAMAGE_CROPS = SUBSTR (DAMAGE_CROPS,1,length(DAMAGE_CROPS)-1)* 1000
