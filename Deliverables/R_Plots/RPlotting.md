@@ -20,4 +20,8 @@ Following are the plots
 ![plot for Amount of Overall damage (crop plus property) by Events ](Q4_Plot3.png) 
 
 
+## RCodes and Plots for Estimated amount of Fatalites & Damage caused by each event
 
+Rcodes for genrating the plot along with data preparation is placed as [Q5_Rcode](Q5_Plot.R)
+
+Following are the plots
