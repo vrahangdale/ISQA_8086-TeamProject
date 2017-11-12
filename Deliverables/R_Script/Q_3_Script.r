@@ -113,15 +113,4 @@ View(max_dec_event)
 
 # Creating Plot of Each month for Event_Type-
 
-plot(jan_data$EVENT_TYPE)
-plot(feb_data$EVENT_TYPE)
-plot(mar_data$EVENT_TYPE)
-plot(apr_data$EVENT_TYPE)
-plot(may_data$EVENT_TYPE)
-plot(jun_data$EVENT_TYPE)
-plot(jul_data$EVENT_TYPE)
-plot(aug_data$EVENT_TYPE)
-plot(sep_data$EVENT_TYPE)
-plot(oct_data$EVENT_TYPE)
-plot(nov_data$EVENT_TYPE)
-plot(dec_data$EVENT_TYPE)
+plot(table_month)
