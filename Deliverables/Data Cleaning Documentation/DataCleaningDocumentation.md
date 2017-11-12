@@ -9,7 +9,7 @@ The National Centers for Environmental Information (NCEI) regularly receives Sto
 
 We are going to use the data collected over a period of 6 consecutive years i.e. from 2011-2016 and refine it through data cleaning using R for our analysis.
 
-The Strom Event dataset is having 51 attributes overall, few of which are State_FIPS, Storm magnitude with storm events type in particular location, and this data can be used in personal, educational, and academic purposes.
+The Storm Event dataset is having 51 attributes overall, few of which are State_FIPS, Storm magnitude with storm events type in particular location, and this data can be used in personal, educational, and academic purposes.
 
 #### The file format is CSV (Comma-Separated Values) text files which represent a dump or export of the Storm Events Database
 
