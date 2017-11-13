@@ -1,6 +1,6 @@
 ##Reading the file from working directory 
 # Reading the Event Id,Event Type, Month and assigning it as Dataset3_month
-Dataset=read.csv('StormEvents_details-ftp_v1.0_d2016_c20170918.csv')
+Dataset=read.csv('./../../RawDataset/project_data/StormEvents_details-ftp_v1.0_d2016_c20170918.csv')
 Dataset3_month <- Dataset[,c(8,12,13)]
 # Create Month_Name as the factor.
 Dataset3_month$MONTH_NAME=as.factor(Dataset3_month$MONTH_NAME)

@@ -1,6 +1,6 @@
 #Reading and subsetting the Dataset
 
-Dataset=read.csv('StormEvents_details-ftp_v1.0_d2016_c20170918.csv', stringsAsFactors = TRUE)
+Dataset=read.csv('./../../RawDataset/project_data/StormEvents_details-ftp_v1.0_d2016_c20170918.csv', stringsAsFactors = TRUE)
 Dataset1<-Dataset[,c(8,9,11,13,45,46,47,48)]
 Dataset2<- na.omit(Dataset1)
 

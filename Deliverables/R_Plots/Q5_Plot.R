@@ -2,7 +2,7 @@
 
 #Read  the dataset of 2016
 
-Dataset1=read.csv('StormEvents_details-ftp_v1.0_d2016_c20170918.csv',stringsAsFactors = F)
+Dataset1=read.csv('./../../RawDataset/project_data/StormEvents_details-ftp_v1.0_d2016_c20170918.csv',stringsAsFactors = F)
 
 #Extract only Event Id,Month name, Event Type, damage property, Injuries indirect, injuries direct, deaths indirect, deaths direct and assigning it as Dataset5_severity
 
