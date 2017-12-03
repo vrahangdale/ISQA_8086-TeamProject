@@ -163,7 +163,7 @@ ggplot(Dataset3_month, aes(x = MONTH_NAME, fill = EVENT_TYPE)) + geom_bar()+labs
 ggplot(highfreq_event, aes(x = Month, fill = Event)) + geom_bar()+labs(title = "Clustered Graph Showing Month and high occuringEvents",x="Month", y="Event Count")
   #THIS GRAPH SHOWS THE MONTH WISE DISTRIBUTION 
 
-ggplot(highfreq_event1p, aes(x = Event, fill =Month ))+ geom_bar()+theme(axis.text.x = element_text(angle = 90, hjust =1))+labs(title = "Cluster of Months Ver Event",x="Events", y="Count")
+ggplot(highfreq_event1p, aes(x = Event, fill =Month ))+ geom_bar()+theme(axis.text.x = element_text(angle = 90, hjust =1))+labs(title = "Cluster of Months per Event",x="Events", y="Count")
 
 
 
