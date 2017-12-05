@@ -10,6 +10,62 @@ dataset2013 <- read.csv('StormEvents_details-ftp_v1.0_d2013_c20170519.csv',heade
 dataset2012 <- read.csv('StormEvents_details-ftp_v1.0_d2012_c20170519.csv',header = TRUE,stringsAsFactors = F)
 dataset2011 <- read.csv('StormEvents_details-ftp_v1.0_d2011_c20170519.csv',header = TRUE,stringsAsFactors = F)
 
+# showing which event is maximum for each year
+Dataset2016_event <- dataset2016[,c(8,12,13)]
+Dataset2016_event$EVENT_TYPE=as.factor(Dataset2016_event$EVENT_TYPE)
+table_16 <- table(Dataset2016_event$EVENT_TYPE)
+df16<- as.data.frame(table_16)
+names(df16)<- c("EventType","Frequency")
+df16<- subset(df16,subset=Frequency>=50, select= c(EventType,Frequency))
+p16 <-  ggplot(df16, aes(x=EventType, y = Frequency))+geom_col()+ theme(axis.text.x = element_text(angle = 90, hjust =1))+labs(title = "2016 Events",x="Event", y="Frequency")
+p16 #Thunderstorm happened largest time in 2016 
+
+Dataset2015_event <- dataset2015[,c(8,12,13)]
+Dataset2015_event$EVENT_TYPE=as.factor(Dataset2015_event$EVENT_TYPE)
+max(summary(Dataset2015_event$EVENT_TYPE))
+table_15 <- table(Dataset2015_event$EVENT_TYPE)
+df15<- as.data.frame(table_15)
+names(df15)<- c("EventType","Frequency")
+df15<- subset(df15,subset=Frequency>=50, select= c(EventType,Frequency))
+p15 <-  ggplot(df15, aes(x=EventType, y = Frequency))+geom_col()+ theme(axis.text.x = element_text(angle = 90, hjust =1))+labs(title = "2015 Events",x="Event", y="Frequency")
+p15 #Thunderstorm happened largest time in 2015
+
+Dataset2014_event <- dataset2014[,c(8,12,13)]
+Dataset2014_event$EVENT_TYPE=as.factor(Dataset2014_event$EVENT_TYPE)
+table_14 <- table(Dataset2014_event$EVENT_TYPE)
+df14<- as.data.frame(table_14)
+names(df14)<- c("EventType","Frequency")
+df14<- subset(df14,subset=Frequency>=50, select= c(EventType,Frequency))
+p14 <-  ggplot(df14, aes(x=EventType, y = Frequency))+geom_col()+ theme(axis.text.x = element_text(angle = 90, hjust =1))+labs(title = "2014 Events",x="Event", y="Frequency")
+p14 #Thunderstorm happened largest time in 2014
+
+Dataset2013_event <- dataset2013[,c(8,12,13)]
+Dataset2013_event$EVENT_TYPE=as.factor(Dataset2013_event$EVENT_TYPE)
+table_13 <- table(Dataset2013_event$EVENT_TYPE)
+df13<- as.data.frame(table_13)
+names(df13)<- c("EventType","Frequency")
+df13<- subset(df13,subset=Frequency>=50, select= c(EventType,Frequency))
+p13 <-  ggplot(df13, aes(x=EventType, y = Frequency))+geom_col()+ theme(axis.text.x = element_text(angle = 90, hjust =1))+labs(title = "2013 Events",x="Event", y="Frequency")
+p13 #Thunderstorm happened largest time in 2013
+
+Dataset2012_event <- dataset2012[,c(8,12,13)]
+Dataset2012_event$EVENT_TYPE=as.factor(Dataset2012_event$EVENT_TYPE)
+table_12 <- table(Dataset2012_event$EVENT_TYPE)
+df12<- as.data.frame(table_12)
+p12 <-  ggplot(df12, aes(x=Var1, y = Freq))+geom_col()+ theme(axis.text.x = element_text(angle = 90, hjust =1))+labs(title = "2012 Events",x="Event", y="Frequency")
+p12#Thunderstorm happened largest time in 2012
+
+Dataset2011_event <- dataset2011[,c(8,12,13)]
+Dataset2011_event$EVENT_TYPE=as.factor(Dataset2011_event$EVENT_TYPE)
+table_11 <- table(Dataset2011_event$EVENT_TYPE)
+df11<- as.data.frame(table_11)
+p11 <-  ggplot(df11, aes(x=Var1, y = Freq))+geom_col()+ theme(axis.text.x = element_text(angle = 90, hjust =1))+labs(title = "2011 Events",x="Event", y="Frequency")
+p11 #Thunderstorm happened largest time in 2011
+
+#### Plotting Time Series for the top 5 damage causing events and the most common event Thunderstorm--
+### The top 5 events having maximum damage both crops and property are done in question 4, refer question 4 for the complete scripts and r plot
+
+
 # creating the subset pf the data by selecting the columns required-
 dataset2016 <- dataset2016[,c(8,9,11,12,13,18,25,26)]
 dataset2015 <- dataset2015[,c(8,9,11,12,13,18,25,26)]
