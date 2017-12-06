@@ -15,7 +15,7 @@ with brief description of the source data and processing (up to a paragraph each
 ## License
 >This project is licensed under  [**_GNU General Public License v3.0_**](https://github.com/vrahangdale/Team-7/blob/master/LICENSE)
 
-## 2. Fully commented knitted HTML document produced with R Studio that includes:--- (Tara, Pradeep)
+## 2. For fully commented knitted HTML document produced with R Studio [Click Here](https://github.com/vrahangdale/ISQA_8086-TeamProject/blob/master/Deliverables/Git%20Package/CSVPitchers_FinalDocument.html)
   * Data cleaning documentation and/or scripts, including data source location,
   * Fully commented analysis script and any outputs that it generates, including summary statistics and plots.
 
