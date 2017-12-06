@@ -30,7 +30,7 @@ with brief description of the source data and processing (up to a paragraph each
       • A word count at the end, not including references, and
       • All relevant references, e.g., data sources and background information.---Shravya
       
-## 5. Any presentation slides or materials that you created (PDF format preferred), and ---(Shravya).
+## 5. Power point presentation slides (In PDF format) [Click here](https://github.com/vrahangdale/ISQA_8086-TeamProject/blob/master/Deliverables/Git%20Package/CSVPitchersFinalPresentation.pdf)
 ## 6. This Markdown document summarizing contributorship to the individual deliverables for the entire project of team CSV-Pitchers. 
 
 | Task                                      | Description                                                                                                                                                                       | Chandra | Shravya | Vaibhav | Pradeep | Task Week Number |
