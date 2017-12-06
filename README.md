@@ -10,12 +10,12 @@ Team Repository for Group Project
 
 1. [Work plan & draft research questions](https://github.com/vrahangdale/ISQA_8086-TeamProject/tree/master/Deliverables/WorkPlan-%20RQs)
 2.  [Data cleaning documentation draft](https://github.com/vrahangdale/ISQA_8086-TeamProject/tree/master/Deliverables/Data%20Cleaning%20Documentation)
-3.  Team progress meeting
-4.  R script draft
-5.  R plot draft
-6.  Audience persona
-7.  Presentation
-8.  Git package
+3.  [Team progress meeting](https://github.com/vrahangdale/ISQA_8086-TeamProject/tree/master/Deliverables/WorkPlan-%20RQs)
+4.  [R script draft](https://github.com/vrahangdale/ISQA_8086-TeamProject/tree/master/Deliverables/R_Script)
+5.  [R plot draft](https://github.com/vrahangdale/ISQA_8086-TeamProject/tree/master/Deliverables/R_Plots)
+6.  [Audience persona](https://github.com/vrahangdale/ISQA_8086-TeamProject/tree/master/Deliverables/AudiencePersona)
+7.  [Presentation](https://github.com/vrahangdale/ISQA_8086-TeamProject/tree/master/Deliverables/Git%20Package)
+8.  [Git package](https://github.com/vrahangdale/ISQA_8086-TeamProject/tree/master/Deliverables/Git%20Package)
 
 
 
