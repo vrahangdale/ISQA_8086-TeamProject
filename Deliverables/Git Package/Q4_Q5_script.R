@@ -127,7 +127,7 @@ p3 <- melt(topTen_totalDamage[, c("EVENT_TYPE", "TOTAL_DAMAGE", "DAMAGE_PROPERTY
 
 ggplot(p3, aes(x = reorder(EVENT_TYPE, -value), y = value)) + geom_bar(stat = "identity", aes(fill = variable), position = "dodge")+scale_y_continuous(labels = comma)+ theme(axis.text.x = element_text(angle = 90, hjust = 1), axis.line = element_line(size = 1, colour = "black", linetype = "dashed"), 
                                                                                                                                                                               panel.background = element_rect(fill = "white"), panel.grid.major = element_line(colour = "black", linetype = "dotted"),
-                                                                                                                                                                              panel.grid.minor = element_line(colour = "black", linetype = "dotted")) + xlab("Event Type") + ylab("Damage cost in $K") + ggtitle("Figure 2: Top ten harmful weather event types in 2016") + 
+                                                                                                                                                                              panel.grid.minor = element_line(colour = "black", linetype = "dotted")) + xlab("Event Type") + ylab("Total Number of Damage") + ggtitle(" Top ten harmful weather event types in 2016") + 
   scale_fill_manual(name = "Damage Type", values = c("firebrick1", "dodgerblue3", "chartreuse3"), 
                     labels = c("Total Damage",  "Property Damage", "Crop Damage"))
 
@@ -157,7 +157,7 @@ p6 <- melt(topTen_totalCasualties[, c("EVENT_TYPE", "TOTAL_CASUALTIES", "TOTAL_I
 
 ggplot(p6, aes(x = reorder(EVENT_TYPE, -value), y = value)) + geom_bar(stat = "identity", aes(fill = variable), position = "dodge")+scale_y_continuous(labels = comma)+ theme(axis.text.x = element_text(angle = 45, hjust = 1), axis.line = element_line(size = 1, colour = "black", linetype = "dashed"), 
                                                                                                                                                                               panel.background = element_rect(fill = "white"), panel.grid.major = element_line(colour = "black", linetype = "dotted"),
-                                                                                                                                                                              panel.grid.minor = element_line(colour = "black", linetype = "dotted")) + xlab("Event Type") + ylab("Damage cost in $K") + ggtitle("Figure 2: Top ten harmful weather event types in 2016") + 
+                                                                                                                                                                              panel.grid.minor = element_line(colour = "black", linetype = "dotted")) + xlab("Event Type") + ylab("Total Number of Damage") + ggtitle("Top ten harmful weather event types in 2016") + 
   scale_fill_manual(name = "Damage Type", values = c("firebrick1", "dodgerblue3", "chartreuse3"), 
                     labels = c("Total casualties",  "injuries", " deaths"))
 
