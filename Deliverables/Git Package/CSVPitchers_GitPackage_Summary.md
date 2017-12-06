@@ -1,20 +1,20 @@
 ### Target Audience 
 Property and Casualty Actuarial Managers are the target audience for our analysis. The responsibilities of these managers in general are:
-•	Obtain premium and loss data using predefined or user created database procedures.
-•	Calculate company loss and expense reserves.
-•	Provides actuarial support in evaluating new product or product enhancement recommendations.
-•	Recommends and prepares experience, expense or rate effect exhibits to support product recommendations.
-•	Develops, recommends and implements operational plans and procedures.
-•	Prepare the annual Permissible Loss Ratio Analysis.
-•	Provide actuarial recommendations on corporate issues such as internal rate of return
-•	Conducting other risk-analysis related-projects in at least one of the following areas: Loss control, standard industry practices regarding claim reviews, claim evaluations, strategic planning and analysis; merger and acquisition valuations; reinsurance program review and expert witness testimony.
+*	Obtain premium and loss data using predefined or user created database procedures.
+*	Calculate company loss and expense reserves.
+*	Provides actuarial support in evaluating new product or product enhancement recommendations.
+*	Recommends and prepares experience, expense or rate effect exhibits to support product recommendations.
+*	Develops, recommends and implements operational plans and procedures.
+*	Prepare the annual Permissible Loss Ratio Analysis.
+*	Provide actuarial recommendations on corporate issues such as internal rate of return
+*	Conducting other risk-analysis related-projects in at least one of the following areas: Loss control, standard industry practices regarding claim reviews, claim evaluations, strategic planning and analysis; merger and acquisition valuations; reinsurance program review and expert witness testimony.
 ### Decisions of Target Audience
 Our analysis on the storm events will help the actuarial managers to perform their job at their best. It helps in making decisions regarding
-•	Risk Analysis their own company during/after occurrence of natural disasters.
-•	Evaluation of new products or enhancements in existing products provided by the company based on the previous observations/ analysis on various events including natural calamities.
-•	Operational/ strategic plans required to be put in place.
-•	Evaluate the annual Permissible Loss Ratio Analysis.
-•	Claims raised during or after a natural calamity has occurred.
+*	Risk Analysis their own company during/after occurrence of natural disasters.
+*	Evaluation of new products or enhancements in existing products provided by the company based on the previous observations/ analysis on various events including natural calamities.
+*	Operational/ strategic plans required to be put in place.
+*	Evaluate the annual Permissible Loss Ratio Analysis.
+*	Claims raised during or after a natural calamity has occurred.
 ### Description of Storm Events Dataset
 We have retrieved our data from NOAA's National Weather Service. The National Centers for Environmental Information (NCEI) regularly receives Storm Data from the National Weather Service (NWS). This data set consists of state wise occurrence of Event type in USA like Tornado, Thunderstorm Wind and Hail, Marine strong wind, Flash flood, Heavy rain, Heavy snow, Funnel Cloud, Extensive Heat and also contains data regarding locations, fatalities, injuries, damage, narratives and any other event specific information which can be used for information and analysis by business sectors, insurance companies, hazard mitigation, policy makers etc. (NCDC, 2017)
 ### Processing/ Data cleaning of Storm Events Dataset
