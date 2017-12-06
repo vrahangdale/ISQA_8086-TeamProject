@@ -1,0 +1,290 @@
+---
+title: "Impact and Analysis of Weather Events"
+author: "CSV Pitchers"
+date: "December 5, 2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Storm Event Database
+
+### About Dataset
+The National Centers for Environmental Information (NCEI) regularly receives Storm Data from the National Weather Service (NWS). This data set consists of state wise occurrence of Event type in USA like Tornado, Thunderstorm Wind and Hail, Marine strong wind, Flash flood, Heavy rain, Heavy snow, Funnel Cloud, Extensive Heat and also contains data regarding locations, fatalities, injuries, damage, narratives and any other event specific information which can be used for information and analysis by business sectors, insurance companies, hazard mitigation, policy makers etc. (NCDC, 2017)
+
+### Data for Analysis
+We are using the data of 2016 to analyze the effect of event types on economy (property damage and crop damage) and casualties (injuries and deaths). Furthermore, We have used data of 2011-2016 to see the trends of top events we have found in 2016.Overall there are 51 attributes/columns in each data file.
+
+### License
+The information on NOAA web page is in the public domain unless specifically annotated otherwise (copyright may be held elsewhere) and may therefore be used freely by the public.  
+Additional information disclaimer and copyright notice can be found in [Disclaimer and Copyright Notice](https://www.nodc.noaa.gov/about/disclaimer.html) .
+
+### Metadata : Information available to understand and interprete data
+Storm events database contains the records with information on
+
+* Occurrence of Storms and other significant events which is likely to cause more damage, death and injuries.
+* Other rare, unusual weather phenomenon like snow flurries
+
+The data is entered by NOAA's National Weather Service(NWS). Overall 48 event types are recorded as metnioned in [NWS Directive 10-1605](https://www.ncdc.noaa.gov/stormevents/pd01016005curr.pdf).
+
+51 Columns/datafields are there in data which can be defined as shown in [Storm Data Export Format](http://www1.ncdc.noaa.gov/pub/data/swdi/stormevents/csvfiles/Storm-Data-Export-Format.docx)
+
+### Issues Encountered with data
+* Columns having similar properties are there such as BEGIN_YEARMONTH, BEGIN_DAY, BEGIN_TIME and BEGIN_DATE_TIME. Similar case is found for END DATE as well.
+* When looking into 2016 data, 11690 out of 55959  have blank values in DAMAGE_PROPERTY though it also have values 0.00 K in other rows. 
+* 11355 out of 55959 have blank values in DAMAGE_CROPS in 2016 data. Like in DAMAGE_PROPERTY, this field also contains value 0.00K.
+* Negligible row i.e. 45 out of 55959 data in 2016 have source UNKNOWN.
+
+### Remediation steps
+
+*We are using different set of columns for each of the research question so that our analysis is oriented towards a particular audience and our result can be implemented easily . For our intitial analysis we are removing 'none' value because R automatically excludes all cases in which any of the inputs are missing; this can limit the amount of information available in the analysis.
+
+*We are dropping the columns which have redundant data such as 'BEGIN_YEARMONTH', 'END_YEARMONTH',  'state_fips' as these values are combination of columns present in the data set and for the analysis we can keep the data granular so that we can represent the result in more granular way.
+
+*We are also removing the columns 'EPISODE_NARRATIVE', 'event_narrative' and 'DATA_SOURCE' as these are nominal data and it will hard to analyize them in R, but we will be using them seperately as remarks. We have checked for the duplicate values and removed the duplicate values for each question.
+
+### Data Cleaning & Analysis Steps
+
+
+####Loading the data
+We have used the necessary functions and loaded the data from 2011-2016 into the respective dataframe as:
+```{r , include = TRUE, message = FALSE, warning = FALSE}
+dataset2016 <- read.csv('StormEvents_details-ftp_v1.0_d2016_c20170918.csv',header = TRUE,stringsAsFactors = F, na.strings = c("",NULL,'NA'))
+dataset2015 <- read.csv('StormEvents_details-ftp_v1.0_d2015_c20170918.csv',header = TRUE,stringsAsFactors = F,na.strings = c("",NULL,'NA'))
+dataset2014 <- read.csv('StormEvents_details-ftp_v1.0_d2014_c20170718.csv',header = TRUE,stringsAsFactors = F,na.strings = c("",NULL,'NA'))
+dataset2013 <- read.csv('StormEvents_details-ftp_v1.0_d2013_c20170519.csv',header = TRUE,stringsAsFactors = F,na.strings = c("",NULL,'NA'))
+dataset2012 <- read.csv('StormEvents_details-ftp_v1.0_d2012_c20170519.csv',header = TRUE,stringsAsFactors = F,na.strings = c("",NULL,'NA'))
+dataset2011 <- read.csv('StormEvents_details-ftp_v1.0_d2011_c20170519.csv',header = TRUE,stringsAsFactors = F,na.strings = c("",NULL,'NA'))
+
+```
+These data are then combined into one dataframe as :
+
+```{r , include = TRUE, message = FALSE, warning = FALSE}
+dataAll <- rbind(dataset2016,dataset2015,dataset2014,dataset2013,dataset2012,dataset2011)
+
+```
+Internal structure of data has been checked
+```{r , include = TRUE, message = FALSE, warning = FALSE}
+str(dataAll)
+
+```
+
+
+Duplicates have been checked
+
+```{r , include = TRUE, message = FALSE, warning = FALSE}
+dupAll<- unique(dataAll)
+nrow(dataAll)
+nrow(dupAll)
+```
+
+NA is replaced with 0
+```{r , include = TRUE, message = FALSE, warning = FALSE}
+dataAll_na <- dataAll
+dataAll[is.na(dataAll)] <- 0
+```
+
+Values of amount in damage property and damage crops containing M in data is multiplied by 1000 to turn it into K and "K" and "M are then removed from data 
+```{r , include = TRUE, message = FALSE, warning = FALSE}
+dataall_update <- dataAll
+
+index1 <- (substr(dataall_update$DAMAGE_PROPERTY,nchar(dataall_update$DAMAGE_PROPERTY),nchar(dataall_update$DAMAGE_PROPERTY)))=="M"
+index2 <- (substr(dataall_update$DAMAGE_CROPS,nchar(dataall_update$DAMAGE_CROPS),nchar(dataall_update$DAMAGE_CROPS)))=="M"
+index3 <- (substr(dataall_update$DAMAGE_PROPERTY,nchar(dataall_update$DAMAGE_PROPERTY),nchar(dataall_update$DAMAGE_PROPERTY)))=="K"
+index4 <- (substr(dataall_update$DAMAGE_CROPS,nchar(dataall_update$DAMAGE_CROPS),nchar(dataall_update$DAMAGE_CROPS)))=="K"
+
+
+dataall_update$DAMAGE_PROPERTY[index1] <- 
+  as.numeric(substr(dataall_update$DAMAGE_PROPERTY[index1],1,nchar(dataall_update$DAMAGE_PROPERTY[index1])-1))*1000  
+
+dataall_update$DAMAGE_CROPS[index2] <- 
+  as.numeric(substr(dataall_update$DAMAGE_CROPS[index2],1,nchar(dataall_update$DAMAGE_CROPS[index2])-1))*1000  
+
+dataall_update$DAMAGE_PROPERTY[index3] <- 
+  as.numeric(substr(dataall_update$DAMAGE_PROPERTY[index3],1,nchar(dataall_update$DAMAGE_PROPERTY[index3])-1))
+
+dataall_update$DAMAGE_CROPS[index4] <- 
+  as.numeric(substr(dataall_update$DAMAGE_CROPS[index4],1,nchar(dataall_update$DAMAGE_CROPS[index4])-1))
+
+
+```
+Fields Damage property and Damage crops have to be changed into numeric datatypto allow any further analysis
+```{r , include = TRUE, message = FALSE, warning = FALSE}
+dataall_update$DAMAGE_PROPERTY <- as.numeric(as.character(dataall_update$DAMAGE_PROPERTY))
+dataall_update$DAMAGE_CROPS <- as.numeric(as.character(dataall_update$DAMAGE_CROPS))
+
+```
+Replacing NA with 0
+```{r , include = TRUE, message = FALSE, warning = FALSE}
+dataall_update_na <- dataall_update
+dataall_update[is.na(dataall_update)] <- 0
+```
+
+Relevant Statistics are being checked, in this case,summary is taken.
+
+We have to mainly focus on damage property, damage crops, direct injuries, indirect injuries, direct death and indirect deaths.
+```{r , include = TRUE, message = FALSE, warning = FALSE}
+summary(dataall_update)
+```
+
+Now we will start working on data and transforming it accordingly to answer the questions behind this analysis. 
+
+#### i) Which event is more likely to occur on the basis of month (monthwise occurrence)?
+2016 data is taken for the analysis.
+Following script is used
+```{r , include = TRUE, message = FALSE, warning = FALSE}
+library(knitr)
+library(ggplot2)
+
+Dataset3_month <- dataset2016[,c(12,13)]
+# Create event table.
+event_table=table(Dataset3_month$EVENT_TYPE)
+event_table_df<- as.data.frame(event_table)
+names(event_table_df)<- c("Event","Frequency")
+ggplot(event_table_df, aes(x = Frequency)) + geom_density() +scale_y_continuous(labels = comma)# this plot is to find out which event should be considered for  plotting in clustered graph
+# So event above 5000 frequency should be considered while plotting
+# Making subset of the graphs with frequency above the median of the EVenet Frequency so that we only consider the higher occuring events
+event_table_df<- subset(event_table_df,subset=Frequency>median(event_table_df$Frequency), select= c(Event))
+
+
+#Showing the month with frequency of event occurance-
+month_table <- table(Dataset3_month)
+table_M<- as.data.frame(month_table)
+names(table_M)<- c("Month","Event","Frequency")
+mean(table_M$Frequency)
+summary(table_M)
+
+highfreq_event<- subset(table_M,subset=Frequency>350, select= c(Month,Event,Frequency))
+
+highfreq_event1p<- subset(table_M,subset=Frequency>48, select= c(Month,Event,Frequency))
+q1<- c("January", "February","March","April")
+q2<- c("May", "June","July","August")
+q3<- c("September", "October","November","December")
+
+highfreq_eventq1<- subset(highfreq_event,subset=Month %in% q1, select= c(Month,Event,Frequency))
+highfreq_eventq2<- subset(highfreq_event,subset=Month %in% q2, select= c(Month,Event,Frequency))
+highfreq_eventq3<- subset(highfreq_event,subset=Month %in% q3, select= c(Month,Event,Frequency))
+summary(Dataset3_month$MONTH_NAME)
+
+#Creating Subset of data for each month-
+
+jan_data <-Dataset3_month[Dataset3_month$MONTH_NAME == 'January',]
+feb_data <-Dataset3_month[Dataset3_month$MONTH_NAME == 'February',]
+mar_data <-Dataset3_month[Dataset3_month$MONTH_NAME == 'March',]
+apr_data <-Dataset3_month[Dataset3_month$MONTH_NAME == 'April',]
+may_data <-Dataset3_month[Dataset3_month$MONTH_NAME == 'May',]
+jun_data <-Dataset3_month[Dataset3_month$MONTH_NAME == 'June',]
+jul_data <-Dataset3_month[Dataset3_month$MONTH_NAME == 'July',]
+aug_data <-Dataset3_month[Dataset3_month$MONTH_NAME == 'August',]
+sep_data <-Dataset3_month[Dataset3_month$MONTH_NAME == 'September',]
+oct_data <-Dataset3_month[Dataset3_month$MONTH_NAME == 'October',]
+nov_data <-Dataset3_month[Dataset3_month$MONTH_NAME == 'November',]
+dec_data <-Dataset3_month[Dataset3_month$MONTH_NAME == 'December',]
+# Creating Plot For each month-
+
+table_16 <- table(jan_data$EVENT_TYPE)
+df16<- as.data.frame(table_16)
+names(df16)<- c("EventType","Frequency")
+summary(df16)# Check for Q3 So as to select the event greater than third Quartile
+df16.1<- subset(df16,subset=Frequency>50, select= c(EventType,Frequency))
+pjan <-  ggplot(df16.1, aes(x=EventType, y = Frequency))+geom_col()+ theme(axis.text.x = element_text(angle = 90, hjust =1))+labs(title = "January Events",x="Event", y="Frequency")
+pjan
+
+
+table_feb <- table(feb_data$EVENT_TYPE)
+data_feb<- as.data.frame(table_feb)
+names(data_feb)<- c("EventType","Frequency")
+summary(data_feb)# Check for Q3 So as to select the event greater than third Quartile
+data_feb<- subset(data_feb,subset=Frequency>51, select= c(EventType,Frequency))
+pfeb <-  ggplot(data_feb, aes(x=EventType, y = Frequency))+geom_col()+ theme(axis.text.x = element_text(angle = 90, hjust =1))+labs(title = "February Events",x="Event", y="Frequency")
+pfeb
+
+table_mar <- table(mar_data$EVENT_TYPE)
+data_mar<- as.data.frame(table_mar)
+names(data_mar)<- c("EventType","Frequency")
+summary(data_mar)# Check for Q3 So as to select the event greater than third Quartile
+data_mar<- subset(data_mar,subset=Frequency>38, select= c(EventType,Frequency))
+pmar <-  ggplot(data_mar, aes(x=EventType, y = Frequency))+geom_col()+ theme(axis.text.x = element_text(angle = 90, hjust =1))+labs(title = "March Events",x="Event", y="Frequency")
+pmar
+
+table_apr <- table(apr_data$EVENT_TYPE)
+data_apr<- as.data.frame(table_apr)
+names(data_apr)<- c("EventType","Frequency")
+summary(data_apr)# Check for Q3 So as to select the event greater than third Quartile
+data_apr<- subset(data_apr,subset=Frequency>54, select= c(EventType,Frequency))
+papr <-  ggplot(data_apr, aes(x=EventType, y = Frequency))+geom_col()+ theme(axis.text.x = element_text(angle = 90, hjust =1))+labs(title = "April Events",x="Event", y="Frequency")
+papr
+
+table_may <- table(may_data$EVENT_TYPE)
+data_may<- as.data.frame(table_may)
+names(data_may)<- c("EventType","Frequency")
+summary(data_may)# Check for Q3 So as to select the event greater than third Quartile
+data_may<- subset(data_may,subset=Frequency>18, select= c(EventType,Frequency))
+pmay <-  ggplot(data_may, aes(x=EventType, y = Frequency))+geom_col()+ theme(axis.text.x = element_text(angle = 90, hjust =1))+labs(title = "May Events",x="Event", y="Frequency")
+pmay
+
+table_jun<- table(jun_data$EVENT_TYPE)
+data_jun<- as.data.frame(table_jun)
+names(data_jun)<- c("EventType","Frequency")
+summary(data_jun)# Check for Q3 So as to select the event greater than third Quartile
+data_jun<- subset(data_jun,subset=Frequency>32, select= c(EventType,Frequency))
+pjun <-  ggplot(data_jun, aes(x=EventType, y = Frequency))+geom_col()+ theme(axis.text.x = element_text(angle = 90, hjust =1))+labs(title = "June Events",x="Event", y="Frequency")
+pjun
+
+
+table_jul<- table(jul_data$EVENT_TYPE)
+data_jul<- as.data.frame(table_jul)
+names(data_jul)<- c("EventType","Frequency")
+summary(data_jul)# Check for Q3 So as to select the event greater than third Quartile
+data_jul<- subset(data_jul,subset=Frequency>53, select= c(EventType,Frequency))
+pjul <-  ggplot(data_jul, aes(x=EventType, y = Frequency))+geom_col()+ theme(axis.text.x = element_text(angle = 90, hjust =1))+labs(title = "July Events",x="Event", y="Frequency")
+pjul
+
+table_aug<- table(aug_data$EVENT_TYPE)
+data_aug<- as.data.frame(table_aug)
+names(data_aug)<- c("EventType","Frequency")
+summary(data_aug)# Check for Q3 So as to select the event greater than third Quartile
+data_aug<- subset(data_aug,subset=Frequency>39, select= c(EventType,Frequency))
+paug <-  ggplot(data_aug, aes(x=EventType, y = Frequency))+geom_col()+ theme(axis.text.x = element_text(angle = 90, hjust =1))+labs(title = "August Events",x="Event", y="Frequency")
+paug
+
+table_sep<- table(sep_data$EVENT_TYPE)
+data_sep<- as.data.frame(table_sep)
+names(data_sep)<- c("EventType","Frequency")
+summary(data_sep)# Check for Q3 So as to select the event greater than third Quartile
+data_sep<- subset(data_sep,subset=Frequency>27, select= c(EventType,Frequency))
+psep <-  ggplot(data_sep, aes(x=EventType, y = Frequency))+geom_col()+ theme(axis.text.x = element_text(angle = 90, hjust =1))+labs(title = "September Events",x="Event", y="Frequency")
+psep
+
+table_oct<- table(oct_data$EVENT_TYPE)
+data_oct<- as.data.frame(table_oct)
+names(data_oct)<- c("EventType","Frequency")
+summary(data_oct)# Check for Q3 So as to select the event greater than third Quartile
+data_oct<- subset(data_oct,subset=Frequency>49, select= c(EventType,Frequency))
+poct <-  ggplot(data_oct, aes(x=EventType, y = Frequency))+geom_col()+ theme(axis.text.x = element_text(angle = 90, hjust =1))+labs(title = "October Events",x="Event", y="Frequency")
+poct
+
+table_nov<- table(nov_data$EVENT_TYPE)
+data_nov<- as.data.frame(table_nov)
+names(data_nov)<- c("EventType","Frequency")
+summary(data_nov)# Check for Q3 So as to select the event greater than third Quartile
+data_nov<- subset(data_nov,subset=Frequency>39, select= c(EventType,Frequency))
+pnov <-  ggplot(data_nov, aes(x=EventType, y = Frequency))+geom_col()+ theme(axis.text.x = element_text(angle = 90, hjust =1))+labs(title = "November Events",x="Event", y="Frequency")
+pnov
+
+table_dec<- table(dec_data$EVENT_TYPE)
+data_dec<- as.data.frame(table_dec)
+names(data_dec)<- c("EventType","Frequency")
+summary(data_dec)# Check for Q3 So as to select the event greater than third Quartile
+data_dec<- subset(data_dec,subset=Frequency>71, select= c(EventType,Frequency))
+pdec <-  ggplot(data_dec, aes(x=EventType, y = Frequency))+geom_col()+ theme(axis.text.x = element_text(angle = 90, hjust =1))+labs(title = "December Events",x="Event", y="Frequency")
+pdec
+
+```
+
+
+
+
+
