@@ -14,7 +14,7 @@ Team Repository for Group Project
 4.  [R script draft](https://github.com/vrahangdale/ISQA_8086-TeamProject/tree/master/Deliverables/R_Script)
 5.  [R plot draft](https://github.com/vrahangdale/ISQA_8086-TeamProject/tree/master/Deliverables/R_Plots)
 6.  [Audience persona](https://github.com/vrahangdale/ISQA_8086-TeamProject/tree/master/Deliverables/AudiencePersona)
-7.  [Presentation](https://github.com/vrahangdale/ISQA_8086-TeamProject/tree/master/Deliverables/Git%20Package)
+7.  [Presentation](https://github.com/vrahangdale/ISQA_8086-TeamProject/blob/master/Deliverables/Git%20Package/CSVPitchersFinalPresentation.pdf)
 8.  [Git package](https://github.com/vrahangdale/ISQA_8086-TeamProject/tree/master/Deliverables/Git%20Package)
 
 
