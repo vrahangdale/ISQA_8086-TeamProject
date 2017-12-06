@@ -80,3 +80,46 @@ p4<- subset(table_w,subset=Frequency>0, select= c(State,Event,Frequency))
 
 qplot(p4$State, p4$Event, data=p4, size=Frequency,col= Event, alpha=I(6/10), main="Intensity of Events in West Region", 
       xlab="State", ylab="Events Type")+theme(axis.text.x = element_text(angle = 90, hjust =1))
+
+# Plotting logitute and latitute on US Map-
+# Load the followng Library
+library("Rcpp")
+library("ggmap")
+
+# Making subset according to events, taking top 5 damage causing events
+thunder_plot<- subset(Dataset2,EVENT_TYPE=="Thunderstorm Wind")
+thunder_plot<- na.omit(thunder_plot)
+
+FFlood_plot<- subset(Dataset2,EVENT_TYPE=="Flash Flood")
+FFlood_plot<- na.omit(FFlood_plot)
+
+Flood_plot<- subset(Dataset2,EVENT_TYPE=="Flood")
+Flood_plot<- na.omit(Flood_plot)
+
+hail_plot<- subset(Dataset2,EVENT_TYPE=="Hail")
+hail_plot<- na.omit(hail_plot)
+
+hurricane_plot<- subset(Dataset2,EVENT_TYPE=="Tornado")
+hurricane_plot<- na.omit(hurricane_plot)
+
+
+
+
+# Plotting-
+usmap<-qmap("United States",zoom = 4)
+
+usmap+geom_point(aes(x=BEGIN_LON,y=BEGIN_LAT),data=thunder_plot)
+plot(thunder_plot$BEGIN_LON,thunder_plot$BEGIN_LAT)+ggtitle("Thunderstorm Plot")
+
+
+usmap<-qmap("United States",zoom = 4)
+usmap+geom_point(aes(x=BEGIN_LON,y=BEGIN_LAT),data=FFlood_plot)+ggtitle("Flash Flood Plot")
+
+usmap<-qmap("United States",zoom = 4)
+usmap+geom_point(aes(x=BEGIN_LON,y=BEGIN_LAT),data=Flood_plot)+ggtitle("Flood Plot")
+
+usmap<-qmap("United States",zoom = 4)
+usmap+geom_point(aes(x=BEGIN_LON,y=BEGIN_LAT),data=hail_plot)+ggtitle("Hail Plot")
+
+usmap<-qmap("United States",zoom = 4)
+usmap+geom_point(aes(x=BEGIN_LON,y=BEGIN_LAT),data=hurricane_plot)+ggtitle("Hurricane Plot")
