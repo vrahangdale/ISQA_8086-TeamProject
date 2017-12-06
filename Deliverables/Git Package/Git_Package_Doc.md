@@ -19,7 +19,7 @@ with brief description of the source data and processing (up to a paragraph each
   * Data cleaning documentation and/or scripts, including data source location,
   * Fully commented analysis script and any outputs that it generates, including summary statistics and plots.
 
-## 3. Audience persona, updated based on peer review feedback, in PDF format. ----Shravya
+## 3. Audience persona, updated based on peer review feedback, in PDF format.(Click Here)(https://github.com/vrahangdale/ISQA_8086-TeamProject/blob/master/Deliverables/AudiencePersona/csv_pitchers.pdf)
 ## 4. A written summary (1000 - 1500 words) in Markdown or PDF format that includes:
       • Your audience and the decisions your analysis targets (which may require some additional background),---Shravya
       • Brief description of the source data and processing (up to a paragraph each),---Shravya
