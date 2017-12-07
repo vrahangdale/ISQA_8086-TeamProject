@@ -19,16 +19,9 @@ with brief description of the source data and processing (up to a paragraph each
   * Data cleaning documentation and/or scripts, including data source location,
   * Fully commented analysis script and any outputs that it generates, including summary statistics and plots.
 
-## 3. Audience persona, updated based on peer review feedback, in PDF format.[Click Here](https://github.com/vrahangdale/ISQA_8086-TeamProject/blob/master/Deliverables/AudiencePersona/csv_pitchers.pdf)
-## 4. A written summary in Markdown [Click Here](https://github.com/vrahangdale/ISQA_8086-TeamProject/blob/master/Deliverables/Git%20Package/CSVPitchers_GitPackage_Summary.md)
+## 3.For Audience persona in PDF format.[Click Here](https://github.com/vrahangdale/ISQA_8086-TeamProject/blob/master/Deliverables/AudiencePersona/csv_pitchers.pdf)
 
-      • Your audience and the decisions your analysis targets (which may require some additional background),---Shravya
-      • Brief description of the source data and processing (up to a paragraph each),---Shravya
-      • 2–4 figures (plots) from your analysis---- Tara, Vaibhav, Pradeep
-      • Your interpretations of the plots (up to a paragraph each),---Tara, Vaibhav, Pradeep
-      • A persuasive argument for a decision your specified audience should make based on your results,---Shravya
-      • A word count at the end, not including references, and
-      • All relevant references, e.g., data sources and background information.---Shravya
+## 4. A written summary in Markdown [Click Here](https://github.com/vrahangdale/ISQA_8086-TeamProject/blob/master/Deliverables/Git%20Package/CSVPitchers_GitPackage_Summary.pdf)
       
 ## 5. Power point presentation slides (In PDF format) [Click here](https://github.com/vrahangdale/ISQA_8086-TeamProject/blob/master/Deliverables/Git%20Package/CSVPitchersFinalPresentation.pdf)
 ## 6. This Markdown document summarizing contributorship to the individual deliverables for the entire project of team CSV-Pitchers. 
