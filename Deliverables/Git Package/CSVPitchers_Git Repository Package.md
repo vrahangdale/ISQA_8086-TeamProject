@@ -25,6 +25,7 @@ with brief description of the source data and processing (up to a paragraph each
 > This PDF document provides a written overview of all project and its deliverables which includes the target audience, description of data source, developed plots/graph and interpretation of the each plots with relevant references and source information.
       
 ## 5. Power point presentation slides (In PDF format) [Click here](https://github.com/vrahangdale/ISQA_8086-TeamProject/blob/master/Deliverables/Git%20Package/CSVPitchersFinalPresentation.pdf)
+> Presentation of entire project which includes objective, facing challenges, pitching the analysis with visualization representation of graph and answer questions for the target audience in order to make decision.
 
 ## 6. This Markdown document summarizing contributorship to the individual deliverables for the entire project of team CSV-Pitchers. 
 
