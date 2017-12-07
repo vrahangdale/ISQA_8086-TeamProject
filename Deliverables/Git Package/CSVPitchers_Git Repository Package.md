@@ -8,14 +8,14 @@ Team Repository for Group Project
 * Vaibhav Rahangdale
 * Pradeep Pal
 
-## Overiew of the Git Repository Package contents.
+## 1. Overiew of the Git Repository Package contents.
 * Firslty package contains HTML document which includes data cleaning doucment and scripts with data source location and fully commented    analysis script and any outputs that it generates, including summary statistics and plot. Secondly, In PDF format, we represent updated Audience Persona.Thirdly, In PDF format written summary of target audience and what are the decisions we make from analyzing targets 
 with brief description of the source data and processing (up to a paragraph each), with interpretition of analysis plots. In addition for specified audience a persuasive argument to take decision based on our results.At last all the relevant references, related to data sources and background information.
 
 ## License
 >This project is licensed under  [**_GNU General Public License v3.0_**](https://github.com/vrahangdale/Team-7/blob/master/LICENSE)
 
-## 2. For fully commented knitted HTML document produced with R Studio[Click Here](https://github.com/vrahangdale/ISQA_8086-TeamProject/blob/master/Deliverables/Git%20Package/CSVPitchers_FinalDocument.html)
+## 2. For knitted HTML document with comments developed with R Studio[Click Here](https://github.com/vrahangdale/ISQA_8086-TeamProject/blob/master/Deliverables/Git%20Package/CSVPitchers_FinalDocument.html)
 > Data cleaning documentation and/or scripts, including data source location, with fully commented analysis script and any outputs that it generates, including summary statistics and plots.
 
 ## 3. For Audience persona in PDF format.[Click Here](https://github.com/vrahangdale/ISQA_8086-TeamProject/blob/master/Deliverables/AudiencePersona/csv_pitchers.pdf)
