@@ -1,4 +1,4 @@
-## 1. Brief but descriptive Readme.md that includes a license for your work, the names of the team members, and an overview of package contents.
+# ISQA8086 - Git Repository Deliverable Document.
 
 # Team CSV-Pitchers
 Team Repository for Group Project
