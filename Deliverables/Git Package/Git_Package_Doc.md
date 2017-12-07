@@ -21,7 +21,7 @@ with brief description of the source data and processing (up to a paragraph each
 
 ## 3.For Audience persona in PDF format.[Click Here](https://github.com/vrahangdale/ISQA_8086-TeamProject/blob/master/Deliverables/AudiencePersona/csv_pitchers.pdf)
 
-## 4. A written summary in Markdown [Click Here](https://github.com/vrahangdale/ISQA_8086-TeamProject/blob/master/Deliverables/Git%20Package/CSVPitchers_GitPackage_Summary.pdf)
+## 4. A written summary in PDF format. [Click Here](https://github.com/vrahangdale/ISQA_8086-TeamProject/blob/master/Deliverables/Git%20Package/CSVPitchers_GitPackage_Summary.pdf)
       
 ## 5. Power point presentation slides (In PDF format) [Click here](https://github.com/vrahangdale/ISQA_8086-TeamProject/blob/master/Deliverables/Git%20Package/CSVPitchersFinalPresentation.pdf)
 ## 6. This Markdown document summarizing contributorship to the individual deliverables for the entire project of team CSV-Pitchers. 
