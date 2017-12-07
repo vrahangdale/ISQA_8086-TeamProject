@@ -180,6 +180,58 @@ p<- subset(table_s,subset=Frequency>50, select= c(State,Event,Frequency))
 
 qplot(p$State, p$Event, data=p, size=Frequency,col= Event, alpha=I(6/10), main="Intensity of Events in Mid-West Region", 
       xlab="State", ylab="Events Type")+theme(axis.text.x = element_text(angle = 90, hjust =1))
+      
+# Plotting logitute and latitute on US Map-
+# Load the followng Library
+library("Rcpp")
+library("ggmap")
+
+Dataset=read.csv('StormEvents_details-ftp_v1.0_d2016_c20170918.csv', stringsAsFactors = TRUE)
+Dataset1<-Dataset[,c(8,9,11,13,45,46,47,48)]
+Dataset2<- na.omit(Dataset1)
+attach(thunder_plot)
+
+# Making subset according to events, taking top 5 damage causing events
+thunder_plot<- subset(Dataset2,EVENT_TYPE=="Thunderstorm Wind")
+thunder_plot<- na.omit(thunder_plot)
+
+FFlood_plot<- subset(Dataset2,EVENT_TYPE=="Flash Flood")
+FFlood_plot<- na.omit(FFlood_plot)
+
+Flood_plot<- subset(Dataset2,EVENT_TYPE=="Flood")
+Flood_plot<- na.omit(Flood_plot)
+
+hail_plot<- subset(Dataset2,EVENT_TYPE=="Hail")
+hail_plot<- na.omit(hail_plot)
+
+hurricane_plot<- subset(Dataset2,EVENT_TYPE=="Tornado")
+hurricane_plot<- na.omit(hurricane_plot)
+
+
+
+
+# Plotting-
+usmap<-qmap("United States",zoom = 4)
+
+usmap+geom_point(aes(x=BEGIN_LON,y=BEGIN_LAT),data=thunder_plot)
+plot(thunder_plot$BEGIN_LON,thunder_plot$BEGIN_LAT)+ggtitle("Thunderstorm Plot")
+
+
+usmap<-qmap("United States",zoom = 4)
+usmap+geom_point(aes(x=BEGIN_LON,y=BEGIN_LAT),data=FFlood_plot)+ggtitle("Flash Flood Plot")
+
+usmap<-qmap("United States",zoom = 4)
+usmap+geom_point(aes(x=BEGIN_LON,y=BEGIN_LAT),data=Flood_plot)+ggtitle("Flood Plot")
+
+usmap<-qmap("United States",zoom = 4)
+usmap+geom_point(aes(x=BEGIN_LON,y=BEGIN_LAT),data=hail_plot)+ggtitle("Hail Plot")
+
+usmap<-qmap("United States",zoom = 4)
+usmap+geom_point(aes(x=BEGIN_LON,y=BEGIN_LAT),data=hurricane_plot)+ggtitle("Hurricane Plot")
+
+
+
+      
 
 ```
 Here We can see that number or frequency of occurrence of event types are represented by the size of the circle as shown in Frequency. This graph gives the information on number of events occurring in a state. We can see that Thunderstorm and Hail are occurring in every state. Comparison is possible of any particular event types between state.
@@ -219,7 +271,7 @@ qplot(p4$State, p4$Event, data=p4, size=Frequency,col= Event, alpha=I(6/10), mai
       xlab="State", ylab="Events Type")+theme(axis.text.x = element_text(angle = 90, hjust =1))
 ```
 
-#### 2. What is the amunt of damage (property & Crops) caused by each event for year 2016?
+#### 2. What is the amount of damage (property & Crops) caused by each event for year 2016?
 For this analysis, we have used the column event types, property damage and crop damage. To focus more on the events which are causing the most damages, we have taken top 10 events instead of considering all the events available in data.
 
 ```{r , include = TRUE, message = FALSE, warning = FALSE}
