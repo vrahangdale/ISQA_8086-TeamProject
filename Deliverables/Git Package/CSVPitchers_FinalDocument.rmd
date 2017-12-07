@@ -41,11 +41,11 @@ The data is entered by NOAA's National Weather Service(NWS). Overall 48 event ty
 
 ### Remediation steps
 
-*We are using different set of columns for each of the research question so that our analysis is oriented towards a particular audience and our result can be implemented easily . For our intitial analysis we are removing 'none' value because R automatically excludes all cases in which any of the inputs are missing; this can limit the amount of information available in the analysis.
+* We are using different set of columns for each of the research question so that our analysis is oriented towards a particular audience and our result can be implemented easily . For our intitial analysis we are removing 'none' value because R automatically excludes all cases in which any of the inputs are missing; this can limit the amount of information available in the analysis.
 
-*We are dropping the columns which have redundant data such as 'BEGIN_YEARMONTH', 'END_YEARMONTH',  'state_fips' as these values are combination of columns present in the data set and for the analysis we can keep the data granular so that we can represent the result in more granular way.
+* We are dropping the columns which have redundant data such as 'BEGIN_YEARMONTH', 'END_YEARMONTH',  'state_fips' as these values are combination of columns present in the data set and for the analysis we can keep the data granular so that we can represent the result in more granular way.
 
-*We are also removing the columns 'EPISODE_NARRATIVE', 'event_narrative' and 'DATA_SOURCE' as these are nominal data and it will hard to analyize them in R, but we will be using them seperately as remarks. We have checked for the duplicate values and removed the duplicate values for each question.
+* We are also removing the columns 'EPISODE_NARRATIVE', 'event_narrative' and 'DATA_SOURCE' as these are nominal data and it will hard to analyize them in R, but we will be using them seperately as remarks. We have checked for the duplicate values and removed the duplicate values for each question.
 
 ### Data Cleaning & Analysis Steps
 
