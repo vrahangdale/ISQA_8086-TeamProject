@@ -16,8 +16,7 @@ with brief description of the source data and processing (up to a paragraph each
 >This project is licensed under  [**_GNU General Public License v3.0_**](https://github.com/vrahangdale/Team-7/blob/master/LICENSE)
 
 ## 2. For fully commented knitted HTML document produced with R Studio [Click Here](https://github.com/vrahangdale/ISQA_8086-TeamProject/blob/master/Deliverables/Git%20Package/CSVPitchers_FinalDocument.html)
-  * Data cleaning documentation and/or scripts, including data source location,
-  * Fully commented analysis script and any outputs that it generates, including summary statistics and plots.
+  * Data cleaning documentation and/or scripts, including data source location, with fully commented analysis script and any outputs that it generates, including summary statistics and plots.
 
 ## 3.For Audience persona in PDF format.[Click Here](https://github.com/vrahangdale/ISQA_8086-TeamProject/blob/master/Deliverables/AudiencePersona/csv_pitchers.pdf)
   * Describes Zenas Carter, Acturial Manager and the main target audience to whom this data analysis is presented and will be useful for interpretation and decisions regarding insurance and way to manage financial risk.
@@ -26,6 +25,7 @@ with brief description of the source data and processing (up to a paragraph each
   * This PDF document provides a written overview of all project and its deliverables which includes the target audience, description of data source, developed plots/graph and interpretation of the each plots with relevant references and source information.
       
 ## 5. Power point presentation slides (In PDF format) [Click here](https://github.com/vrahangdale/ISQA_8086-TeamProject/blob/master/Deliverables/Git%20Package/CSVPitchersFinalPresentation.pdf)
+
 ## 6. This Markdown document summarizing contributorship to the individual deliverables for the entire project of team CSV-Pitchers. 
 
 | Task                                      | Description                                                                                                                                                                       | Chandra | Shravya | Vaibhav | Pradeep | Task Week Number |
