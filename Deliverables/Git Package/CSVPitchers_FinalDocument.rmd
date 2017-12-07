@@ -180,58 +180,6 @@ p<- subset(table_s,subset=Frequency>50, select= c(State,Event,Frequency))
 
 qplot(p$State, p$Event, data=p, size=Frequency,col= Event, alpha=I(6/10), main="Intensity of Events in Mid-West Region", 
       xlab="State", ylab="Events Type")+theme(axis.text.x = element_text(angle = 90, hjust =1))
-      
-# Plotting logitute and latitute on US Map-
-# Load the followng Library
-library("Rcpp")
-library("ggmap")
-
-Dataset=read.csv('StormEvents_details-ftp_v1.0_d2016_c20170918.csv', stringsAsFactors = TRUE)
-Dataset1<-Dataset[,c(8,9,11,13,45,46,47,48)]
-Dataset2<- na.omit(Dataset1)
-attach(thunder_plot)
-
-# Making subset according to events, taking top 5 damage causing events
-thunder_plot<- subset(Dataset2,EVENT_TYPE=="Thunderstorm Wind")
-thunder_plot<- na.omit(thunder_plot)
-
-FFlood_plot<- subset(Dataset2,EVENT_TYPE=="Flash Flood")
-FFlood_plot<- na.omit(FFlood_plot)
-
-Flood_plot<- subset(Dataset2,EVENT_TYPE=="Flood")
-Flood_plot<- na.omit(Flood_plot)
-
-hail_plot<- subset(Dataset2,EVENT_TYPE=="Hail")
-hail_plot<- na.omit(hail_plot)
-
-hurricane_plot<- subset(Dataset2,EVENT_TYPE=="Tornado")
-hurricane_plot<- na.omit(hurricane_plot)
-
-
-
-
-# Plotting-
-usmap<-qmap("United States",zoom = 4)
-
-usmap+geom_point(aes(x=BEGIN_LON,y=BEGIN_LAT),data=thunder_plot)
-plot(thunder_plot$BEGIN_LON,thunder_plot$BEGIN_LAT)+ggtitle("Thunderstorm Plot")
-
-
-usmap<-qmap("United States",zoom = 4)
-usmap+geom_point(aes(x=BEGIN_LON,y=BEGIN_LAT),data=FFlood_plot)+ggtitle("Flash Flood Plot")
-
-usmap<-qmap("United States",zoom = 4)
-usmap+geom_point(aes(x=BEGIN_LON,y=BEGIN_LAT),data=Flood_plot)+ggtitle("Flood Plot")
-
-usmap<-qmap("United States",zoom = 4)
-usmap+geom_point(aes(x=BEGIN_LON,y=BEGIN_LAT),data=hail_plot)+ggtitle("Hail Plot")
-
-usmap<-qmap("United States",zoom = 4)
-usmap+geom_point(aes(x=BEGIN_LON,y=BEGIN_LAT),data=hurricane_plot)+ggtitle("Hurricane Plot")
-
-
-
-      
 
 ```
 Here We can see that number or frequency of occurrence of event types are represented by the size of the circle as shown in Frequency. This graph gives the information on number of events occurring in a state. We can see that Thunderstorm and Hail are occurring in every state. Comparison is possible of any particular event types between state.
@@ -271,7 +219,54 @@ qplot(p4$State, p4$Event, data=p4, size=Frequency,col= Event, alpha=I(6/10), mai
       xlab="State", ylab="Events Type")+theme(axis.text.x = element_text(angle = 90, hjust =1))
 ```
 
-#### 2. What is the amount of damage (property & Crops) caused by each event for year 2016?
+Below are the plots in US map showing the similar distribution as shown above. Here top events are taken :Falsh flood, flood, hail, tornado and thunderstorm. Though Hurricane(Typhoon), Tropical Storm, Storm surge/Tide, wildfire are also topmost damaging events, longitudes and latitudes are missing in data. Thus we haven't plotted these events in US map.
+
+```{r , include = TRUE, message = FALSE, warning = FALSE}
+library("Rcpp")
+library("ggmap")
+library("qmap")
+
+Dataset1<-dataset2016[,c(8,9,11,13,45,46,47,48)]
+Dataset2<- na.omit(Dataset1)
+
+# Making subset according to events, taking top 5 damage causing events
+thunder_plot<- subset(Dataset2,EVENT_TYPE=="Thunderstorm Wind")
+thunder_plot<- na.omit(thunder_plot)
+
+FFlood_plot<- subset(Dataset2,EVENT_TYPE=="Flash Flood")
+FFlood_plot<- na.omit(FFlood_plot)
+
+Flood_plot<- subset(Dataset2,EVENT_TYPE=="Flood")
+Flood_plot<- na.omit(Flood_plot)
+
+hail_plot<- subset(Dataset2,EVENT_TYPE=="Hail")
+hail_plot<- na.omit(hail_plot)
+
+tornado_plot<- subset(Dataset2,EVENT_TYPE=="Tornado")
+tornado_plot<- na.omit(tornado_plot)
+
+
+```
+
+Here we can see which region is more affected by these events clearly. Thunderstorm is more prevalent and distributed over large area. 
+
+```{r , include = TRUE, message = FALSE, warning = FALSE}
+
+usmap<-qmap("United States",zoom = 4)
+usmap+geom_point(aes(x=BEGIN_LON,y=BEGIN_LAT),data=FFlood_plot)+ggtitle("Thunderstorm Plot")
+
+usmap+geom_point(aes(x=BEGIN_LON,y=BEGIN_LAT),data=FFlood_plot)+ggtitle("Flash Flood Plot")
+
+usmap+geom_point(aes(x=BEGIN_LON,y=BEGIN_LAT),data=Flood_plot)+ggtitle("Flood Plot")
+
+usmap+geom_point(aes(x=BEGIN_LON,y=BEGIN_LAT),data=hail_plot)+ggtitle("Hail Plot")
+
+usmap+geom_point(aes(x=BEGIN_LON,y=BEGIN_LAT),data=tornado_plot)+ggtitle("Tornado Plot")
+
+
+```
+
+#### 2. What is the amunt of damage (property & Crops) caused by each event for year 2016?
 For this analysis, we have used the column event types, property damage and crop damage. To focus more on the events which are causing the most damages, we have taken top 10 events instead of considering all the events available in data.
 
 ```{r , include = TRUE, message = FALSE, warning = FALSE}
@@ -392,7 +387,7 @@ dataset_thunder1 <- subset(dataset_thunder,subset = DAMAGE_OVERALL>0 & DAMAGE_OV
 # plot time series
 ts_thunder<- ts(dataset_thunder1$DAMAGE_OVERALL,start=c(2011,1),end=c(2016,12),frequency = 12)
 
-plot(ts_thunder, type="l",col="blue", xlab = "Date",ylab="Number of events", main = "Time series of Thunderstorm")
+plot(ts_thunder, type="l",col="blue", xlab = "Date",ylab="Relative Damage", main = "Time series of Thunderstorm")
 ```
 
 We can see that thunderstorm is almost occurring in every year through out the months. Here 0 is relative rather than the absolute value.
@@ -408,7 +403,7 @@ dataset_flashflood1 <- subset(dataset_flashflood,subset = DAMAGE_OVERALL>0  , se
 
 ts_flashflood<- ts(dataset_flashflood1$DAMAGE_OVERALL,start=c(2011,1),end=c(2016,12),frequency = 12)
 
-plot(ts_flashflood, type="l",col="blue", xlab = "Date",ylab="Number of events", main = "Time series of Flash Flood")
+plot(ts_flashflood, type="l",col="blue", xlab = "Date",ylab="Relative Damage", main = "Time series of Flash Flood")
 
 # 2. Flood
 dataset_flood <- subset(dataall_na_addcol,EVENT_TYPE=="Flood")
@@ -418,7 +413,7 @@ dataset_flood1 <- subset(dataset_flood,subset = DAMAGE_OVERALL>0  , select = c(D
 
 ts_flood<- ts(dataset_flood1$DAMAGE_OVERALL,start=c(2011,1),end=c(2016,12),frequency = 12)
 
-plot(ts_flood, type="l",col="blue", xlab = "Date",ylab="Number of events", main = "Time series of Flood")
+plot(ts_flood, type="l",col="blue", xlab = "Date",ylab="Relative Damage", main = "Time series of Flood")
 
 
 # 3. Hail
@@ -430,7 +425,7 @@ dataset_hail1 <- subset(dataset_hail,subset = DAMAGE_OVERALL>0  , select = c(DAM
 
 ts_hail<- ts(dataset_hail1$DAMAGE_OVERALL,start=c(2011,1),end=c(2016,12),frequency = 12)
 
-plot(ts_hail, type="l",col="blue", xlab = "Date",ylab="Number of events", main = "Time series of Hail")
+plot(ts_hail, type="l",col="blue", xlab = "Date",ylab="Relative Damage", main = "Time series of Hail")
 
 
 # 4. Hurricane
@@ -444,7 +439,7 @@ dataset_hurricane1 <- subset(dataset_hurricane,subset = DAMAGE_OVERALL>0  , sele
 
 ts_hurricane<- ts(dataset_hurricane1$DAMAGE_OVERALL,start=c(2011,1),end=c(2016,12),frequency = 12)
 
-plot(ts_hurricane, type="l",col="blue", xlab = "Date",ylab="Number of events", main = "Time series of Hurricane")
+plot(ts_hurricane, type="l",col="blue", xlab = "Date",ylab="Relative Damage", main = "Time series of Hurricane")
 
 
 # 5. Tropical Storm
@@ -458,7 +453,7 @@ dataset_TropicalStorm1 <- subset(dataset_TropicalStorm,subset = DAMAGE_OVERALL>0
 
 ts_TropicalStorm<- ts(dataset_TropicalStorm1$DAMAGE_OVERALL,start=c(2011,1),end=c(2016,12),frequency = 12)
 
-plot(ts_TropicalStorm, type="l", col="blue", xlab = "Date",ylab="Number of events", main = "Time series of Tropical storm")
+plot(ts_TropicalStorm, type="l", col="blue", xlab = "Date",ylab="Relative Damage", main = "Time series of Tropical storm")
 
 
 ```
@@ -785,3 +780,14 @@ ggplot(p6, aes(x = reorder(EVENT_TYPE, -value), y = value)) + geom_bar(stat = "i
 
 Above graph shows the total casualties considering deaths and injuries above. We can see that some event like tornado has more  injuries than deaths while events like flash flood, rip current and flood are causing more deaths than injuries.
 
+So the takeaway from these analyses are:
+
+* In 2016, Tornado is the most devastating event on the basis of casualties - however injuries way higher than deaths for tornado.
+
+* In 2016, Flash Flood is the most devastating event on the basis of property damage.
+
+* In 2016, Flood is the major cause for crop damage.
+
+* Looking at the trend of topmost events of 2016, thunderstorm and hail are occurring almost each month.
+
+* Looking at the trend of topmost events of 2016 for duration 2011-2016, thunderstorm, hurricane are more uniform than other events.
